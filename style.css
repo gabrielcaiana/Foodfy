@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-white: #fff;
+    --color-rose: #FBDFDB;
+    --color-gray-light: #EEEEEE;
+    --color-black: #111111;
+    --color-black-light: #777777;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    max-width: 940px;
+    height: 50px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    background-color: va(--color-white);
+}
+
+header ul {
+    list-style: none;
+    margin-left: 122px;
+}
+
+header ul li {
+    display: inline;
+    margin: 15px;
+}
+
+header ul a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+.banner {
+    padding: 0 110px 0 60px;
+    width: 100%;
+    max-width: 940px;
+    box-sizing: border-box;
+    height: 366px;
+    background-color: var(--color-rose);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+}
+
+.banner .content-text {
+    max-width: 316px;
+}
+
+.banner .content-text h1 {
+    font-size: 32px;
+    line-height: 42px;
+    color: var(--color-black);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.banner .content-text p {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color-black);
+    opacity: .7;
+}
+
+.receitas {
+    width: 100%;
+    max-width: 940px;
+    margin-top: 50px;
+}
+
+.receitas main,
+.receitas-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.receitas h2 {
+    margin-bottom: 20px;
+    color: var(--color-black);
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.receita-item img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.receita-item p {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--color-black);
+}
+
+.receita-item span {
+    font-size: 14px;
+    line-height: 28px;
+    color: var(--color-black-light);
+}
+
+#about {
+    width: 100%;
+    max-width: 940px;
+}
+
+#about h1 {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 20px;
+    color: var(--color-black);
+    font-weight: 600;
+}
+
+#about h2,
+h3 {
+    font-size: 20px;
+    line-height: 30px;
+    color: #111111;
+}
+
+#about p {
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+    margin: 20px 0;
+}
+
+footer {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEEEEE;
+    color: #999999;
+    font-size: 14px;
+    line-height: 24px;
+    height: 62px;
+}
