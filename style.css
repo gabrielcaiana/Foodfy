@@ -105,12 +105,14 @@ header ul a {
     max-width: 300px;
     border-radius: 15px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 
 .receita-item p {
     font-size: 18px;
     line-height: 28px;
     color: var(--color-black);
+    cursor: pointer;
 }
 
 .receita-item span {
@@ -157,4 +159,26 @@ footer {
     font-size: 14px;
     line-height: 24px;
     height: 62px;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal {
+    width: 660px;
+    height: 413px;
+    background-color: #fff;
+    margin: 10% auto;
+    position: relative;
 }
