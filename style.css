@@ -108,6 +108,14 @@ header ul a {
     cursor: pointer;
 }
 
+.receita-item {
+    transition: transform .2s;
+}
+
+.receita-item:hover {
+    transform: scale(1.1);
+}
+
 .receita-item p {
     font-size: 18px;
     line-height: 28px;
@@ -175,6 +183,7 @@ footer {
     opacity: 1;
     visibility: visible;
 }
+
 .modal {
     width: 660px;
     height: 413px;
@@ -212,4 +221,8 @@ footer {
     font-size: 16px;
     color: #999999;
     margin-top: 60px;
+}
+
+.close:hover {
+    color: var(--color-black);
 }
