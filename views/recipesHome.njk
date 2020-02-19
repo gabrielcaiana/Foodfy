@@ -1,0 +1,24 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+
+<section class="banner">
+    <div class="content-text">
+        <h1>As melhores receitas</h1>
+        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+    </div>
+    <div class="content-image"><img src="assets/image/chef.png" alt="chef"></div>
+</section>
+
+<section class="receitas">
+    <h2>Mais acessadas</h2>
+    <main>
+        <div class="receita-item" data-img="assets/image/burger.png" data-author="por Jorge Relato" data-title="Triplo bacon burger">
+            <img src="assets/image/burger.png" alt="triplo bacon burger">
+            <p class="title-modal">Triplo bacon burger</p>
+            <span class="autor-modal">por Jorge Relato</span>
+        </div>
+    </main>
+</section>
+
+{% endblock %}
