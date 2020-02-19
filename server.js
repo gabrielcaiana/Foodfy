@@ -16,11 +16,7 @@ nunjucks.configure('views', {
 server.use(express.static('public'))
 
 server.get('/', function (req, res) {
-    return res.render('layout')
-})
-
-server.get('/recipesHome', function(req,res){
-    return res.render('recipesHome', {recipes})
+    return res.render('home', {recipes})
 })
 
 server.listen(2000, function () {
