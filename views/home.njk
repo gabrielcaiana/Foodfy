@@ -13,11 +13,13 @@
 <section class="receitas">
     <h2>Mais acessadas</h2>
     <main>
-        <div class="receita-item" data-img="" data-author="por Jorge Relato" data-title="Triplo bacon burger">
-            <img src="assets/image/burger.png" alt="triplo bacon burger">
-            <p class="title-modal">Triplo bacon burger</p>
-            <span class="autor-modal">por Jorge Relato</span>
+    {% for recipe in recipes %}
+        <div class="receita-item">
+            <img src="{{recipe.image}}" alt="{{recipe.title}}">
+            <p class="title-modal">{{recipe.title}}</p>
+            <span class="autor-modal">{{recipe.author}}</span>
         </div>
+        {% endfor%}
     </main>
 </section>
 
