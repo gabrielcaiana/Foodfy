@@ -27,6 +27,10 @@ server.get('/about', (req, res) => {
     res.render('about') 
 })
 
+server.get('*', (req, res) => {
+    res.send('Page not found!')
+})
+
 server.listen(2000, function () {
     console.log('Server running')
 })
