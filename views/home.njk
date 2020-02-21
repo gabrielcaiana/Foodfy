@@ -2,25 +2,25 @@
 
 {% block content %}
 
-<section class="banner">
-    <div class="content-text">
-        <h1>As melhores receitas</h1>
-        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
-    </div>
-    <div class="content-image"><img src="assets/image/chef.png" alt="chef"></div>
-</section>
-
-<section class="receitas">
-    <h2>Mais acessadas</h2>
-    <main>
-    {% for recipe in recipes %}
-        <div class="receita-item">
-            <img src="{{recipe.image}}" alt="{{recipe.title}}">
-            <p class="title-modal">{{recipe.title}}</p>
-            <span class="autor-modal">{{recipe.author}}</span>
+    <section class="banner">
+        <div class="content-text">
+            <h1>As melhores receitas</h1>
+            <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
         </div>
-        {% endfor%}
-    </main>
-</section>
+        <div class="content-image"><img src="assets/image/chef.png" alt="chef"></div>
+    </section>
 
-{% endblock %}
+    <section class="receitas">
+        <h2>Mais acessadas</h2>
+        <div class="receitas-page">
+            {% for recipe in recipes %}
+                <div class="receita-item">
+                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    <p class="title-modal">{{recipe.title}}</p>
+                    <span class="autor-modal">{{recipe.author}}</span>
+                </div>
+                {% endfor%}
+            </div>
+        </section>
+
+    {% endblock %}

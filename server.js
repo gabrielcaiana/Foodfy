@@ -19,6 +19,14 @@ server.get('/', function (req, res) {
     return res.render('home', {recipes})
 })
 
+server.get('/recipes', function(req, res){
+    res.render('recipes', {recipes})
+})
+
+server.get('/about', (req, res) => {
+    res.render('about') 
+})
+
 server.listen(2000, function () {
     console.log('Server running')
 })
