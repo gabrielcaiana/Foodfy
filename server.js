@@ -28,7 +28,7 @@ server.get('/about', (req, res) => {
 })
 
 server.get('*', (req, res) => {
-    res.send('Page not found!')
+    res.render('page404')
 })
 
 server.listen(2000, function () {
