@@ -290,6 +290,7 @@ footer {
     color: #9999;
     text-transform: uppercase;
     margin-left: 8px;
+    cursor: pointer;
 }
 
 .recipeContent ul {

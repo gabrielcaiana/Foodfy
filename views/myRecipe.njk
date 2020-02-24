@@ -9,18 +9,31 @@
         </header>
 
         <article class="recipeContent">
-            <h2>Ingredientes <span class="showItem">esconder</span></h2>
-            <ul>
-                {% for ingredients in myRecipe.ingredients%}
-                    <li>{{ingredients}}</li>
-                    {% endfor%}
-                </ul>
+            <div>
+                <h2>Ingredientes
+                    <span class="showItem">esconder</span></h2>
 
-                <h3>Modo de preparo <span class="showItem">esconder</span></h3>
+                <ul>
+                    {% for ingredients in myRecipe.ingredients%}
+                        <li>{{ingredients}}</li>
+                        {% endfor%}
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Modo de preparo
+                        <span class="showItem">esconder</span></h3>
+
                     <p>{{myRecipe.preparation}}</p>
+                </div>
 
-                <h4>Informações Adicionais <span class="showItem">esconder</span></h4>
+                <div>
+                    <h4>Informações Adicionais
+                        <span class="showItem">esconder</span></h4>
+
                     <p>{{myRecipe.information}}</p>
+                </div>
+
             </article>
         </section>
-{% endblock%}
+        {% endblock%}
