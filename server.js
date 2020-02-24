@@ -16,12 +16,30 @@ nunjucks.configure('views', {
 server.use(express.static('public'))
 
 server.get('/', function (req, res) {
+    // recipes.map((item, index) => item.index = index)
     return res.render('home', {recipes})
 })
 
 server.get('/recipes', function(req, res){
     res.render('recipes', {recipes})
 })
+
+server.get('/:id',(req, res) => { 
+    const recipeId = req.params.id
+
+    const myRecipe = recipes.find(function(myRecipe){
+        if(myRecipe.id == recipeId) {
+            return true
+        }
+    })
+
+    if(!myRecipe) {
+        return res.render('page404')
+    }
+
+    return res.render('myRecipe', {myRecipe})
+})
+
 
 server.get('/about', (req, res) => {
     res.render('about') 

@@ -14,12 +14,14 @@
         <h2>Mais acessadas</h2>
         <div class="receitas-page">
             {% for recipe in recipes %}
-                <div class="receita-item">
-                    <img src="{{recipe.image}}" alt="{{recipe.title}}">
-                    <p class="title-modal">{{recipe.title}}</p>
-                    <span class="autor-modal">{{recipe.author}}</span>
-                </div>
-                {% endfor%}
+                <a href="/recipes/{{recipe.index}}">
+                    <div class="receita-item">
+                        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                        <p class="title-modal">{{recipe.title}}</p>
+                        <span class="autor-modal">{{recipe.author}}</span>
+                    </div>
+                </a>
+            {% endfor%}
             </div>
         </section>
 
