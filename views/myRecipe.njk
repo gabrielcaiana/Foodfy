@@ -1,5 +1,26 @@
 {% extends 'layout.njk' %}
 
 {% block content %}
-    <h1>{{myRecipe.title}}</h1>
+    <section class="container">
+        <header class="headerRecipe">
+            <img src="{{myRecipe.image}}" alt="{{myRecipe.title}}">
+            <h1>{{myRecipe.title}}</h1>
+            <span>{{myRecipe.author}}</span>
+        </header>
+
+        <article class="recipeContent">
+            <h2>Ingredientes <span class="showItem">esconder</span></h2>
+            <ul>
+                {% for ingredients in myRecipe.ingredients%}
+                    <li>{{ingredients}}</li>
+                    {% endfor%}
+                </ul>
+
+                <h3>Modo de preparo <span class="showItem">esconder</span></h3>
+                    <p>{{myRecipe.preparation}}</p>
+
+                <h4>Informações Adicionais <span class="showItem">esconder</span></h4>
+                    <p>{{myRecipe.information}}</p>
+            </article>
+        </section>
 {% endblock%}

@@ -117,6 +117,10 @@ header ul a {
     transform: scale(1.1);
 }
 
+.linkRecipe {
+    text-decoration: none;
+}
+
 .receita-item p {
     font-size: 18px;
     line-height: 28px;
@@ -239,4 +243,62 @@ footer {
 .not-found {
     font-size: 28px;
     line-height: 38px;
+}
+
+/*==== myRecipe ====*/
+.headerRecipe {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.headerRecipe img {
+    border-radius: 15px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+.headerRecipe h1 {
+    font-size: 36px;
+    line-height: 46px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: var(--color-black);
+}
+
+.recipeContent {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 940px;
+}
+
+.recipeContent h2,h3,h4 {
+    font-size: 24px;
+    line-height: 34px;
+    color: var(--color-black);
+    margin: 40px 0 20px 0;
+}
+
+.recipeContent .showItem {
+    font-size: 12px;
+    line-height: 22px;
+    color: #9999;
+    text-transform: uppercase;
+    margin-left: 8px;
+}
+
+.recipeContent ul {
+    margin-left: 18px;
+}
+
+.recipeContent ul li, p {
+    font-size: 18px;
+    line-height: 28px;
+    padding: 2px;
+    color: #444444;
 }

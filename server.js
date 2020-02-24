@@ -24,6 +24,10 @@ server.get('/recipes', function(req, res){
     res.render('recipes', {recipes})
 })
 
+server.get('/about', (req, res) => {
+    res.render('about') 
+})
+
 server.get('/:id',(req, res) => { 
     const recipeId = req.params.id
 
@@ -38,11 +42,6 @@ server.get('/:id',(req, res) => {
     }
 
     return res.render('myRecipe', {myRecipe})
-})
-
-
-server.get('/about', (req, res) => {
-    res.render('about') 
 })
 
 server.get('*', (req, res) => {
