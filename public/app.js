@@ -24,3 +24,19 @@
 // closeModal.addEventListener('click', function(){
 //     modalOverlay.classList.toggle('active')
 // })
+
+const botaoEsconder = document.querySelectorAll('.showItem')
+const conteudo = document.querySelectorAll('.descricao')
+
+for (let i = 0; i < botaoEsconder.length; i++) {
+    botaoEsconder[i].addEventListener('click', function () {
+        if(conteudo[i].style.display == 'none') {
+            this.innerText = 'Ocultar'
+            console.log(this)
+            conteudo[i].style.display = 'block'
+        } else {
+            conteudo[i].style.display = 'none' 
+            this.innerText = 'Mostrar'
+        }  
+    })
+}
