@@ -3,19 +3,19 @@ const routes = express.Router()
 const recipes = require('./data')
 
 routes.get('/', function (req, res) {
-    return res.render('home', {recipes})
+    return res.render('pages/home', {recipes})
 })
 
 routes.get('/', function (req, res) {
-    return res.render('home', {recipes})
+    return res.render('pages/home', {recipes})
 })
 
 routes.get('/recipes', function(req, res){
-    res.render('recipes', {recipes})
+    res.render('recipes/recipes', {recipes})
 })
 
 routes.get('/about', (req, res) => {
-    res.render('about') 
+    res.render('pages/about') 
 })
 
 routes.get('/:id',(req, res) => { 
@@ -28,10 +28,14 @@ routes.get('/:id',(req, res) => {
     })
 
     if(!myRecipe) {
-        return res.render('page404')
+        return res.render('pages/page404')
     }
 
-    return res.render('myRecipe', {myRecipe})
+    return res.render('recipes/myRecipe', {myRecipe})
+})
+
+routes.get('*', (req, res) => {
+    res.render('pages/page404')
 })
 
 module.exports = routes

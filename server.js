@@ -16,10 +16,6 @@ nunjucks.configure('views', {
     noCache: true
 })
 
-server.get('*', (req, res) => {
-    res.render('page404')
-})
-
 server.listen(2000, function () {
     console.log('Server running')
 })
