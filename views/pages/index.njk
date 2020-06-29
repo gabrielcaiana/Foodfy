@@ -13,7 +13,7 @@
     <section class="receitas">
         <h2>Mais acessadas</h2>
         <div class="receitas-page">
-            {% for recipe in recipes %}
+            {% for recipe in data_recipes %}
                 <a class="linkRecipe" href="/{{recipe.id}}">
                     <div class="receita-item">
                         <img src="{{recipe.image}}" alt="{{recipe.title}}">
