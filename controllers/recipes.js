@@ -1,7 +1,7 @@
 const recipes = require('../data')
 
 exports.index = (req, res) => {
-    res.render('pages/recipes', {recipes})
+    res.render('pages/site/recipes', {recipes})
 }
 
 exports.url_recipe =  (req, res) => { 
@@ -14,11 +14,17 @@ exports.url_recipe =  (req, res) => {
     })
     
     if(!myRecipe) {
-        return res.render('./pages/page404')
+        return res.render('pages/page404')
     }
     
-    return res.render('recipes/myRecipe', {myRecipe})
+    return res.render('pages/site/myRecipe', {myRecipe})
 }
+
+//ADMIN
+
+// exports.adm_index = (req, res) => {
+//     res.render('pages/admin/index')
+// }
 
 
 
