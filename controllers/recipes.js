@@ -1,13 +1,17 @@
-const recipes = require('../data')
+const recipes = require('../data.json')
 
-exports.index = (req, res) => {
-    res.render('pages/site/recipes', {recipes})
+exports.index = function (req, res) {
+    return res.render('pages/site/index', {recipes}.recipes)
+}
+
+exports.recipes = (req, res) => {
+        res.render('pages/site/recipes', {recipes}.recipes)
 }
 
 exports.url_recipe =  (req, res) => { 
     const recipeId = req.params.id
     
-    const myRecipe = recipes.find(function(myRecipe){
+    const myRecipe = recipes.recipes.find(function(myRecipe){
         if(myRecipe.id == recipeId) {
             return true
         }
@@ -22,7 +26,7 @@ exports.url_recipe =  (req, res) => {
 
 //ADMIN
 exports.adm_index = (req, res) => {
-    res.render('pages/admin/index', {recipes})
+    res.render('pages/admin/index',{recipes}.recipes)
 }
 
 exports.show = (req, res) => {
