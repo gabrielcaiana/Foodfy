@@ -21,9 +21,12 @@ exports.url_recipe =  (req, res) => {
 }
 
 //ADMIN
-
 exports.adm_index = (req, res) => {
     res.render('pages/admin/index', {recipes})
+}
+
+exports.show = (req, res) => {
+    res.send('Página de editar')
 }
 
 

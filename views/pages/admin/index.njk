@@ -1,7 +1,9 @@
 {% extends 'layout.njk' %}
 
 {% block header %}
-    <header style="background-color: black"></header>
+    <header>
+        <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
+    </header>
 {% endblock %}
 
 {% block content %}
@@ -16,7 +18,7 @@
                     <div>
                         <p>{{recipe.title}}</p>
                         <span>{{recipe.author}}</span>
-                         <a class="linkRecipe" href="/{{recipe.id}}">Visualizar</a>
+                        <a class="linkRecipe" href="/{{recipe.id}}">Visualizar</a>
                     </div>
                 </div>
                 {% endfor%}

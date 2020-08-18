@@ -16,17 +16,19 @@
 
     <body>
         <div class="container">
-            <header class="header-site">
-                <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
-                <ul>
-                    <a href="/about">
-                        <li>Sobre</li>
-                    </a>
-                    <a href="/recipes">
-                        <li>Receitas</li>
-                    </a>
-                </ul>
-            </header>
+            {% block header %}
+                <header>
+                    <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
+                    <ul>
+                        <a href="/about">
+                            <li>Sobre</li>
+                        </a>
+                        <a href="/recipes">
+                            <li>Receitas</li>
+                        </a>
+                    </ul>
+                </header>
+            {% endblock %}
             {% block content %}{% endblock %}
 
             <footer>
