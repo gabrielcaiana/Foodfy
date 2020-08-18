@@ -14,7 +14,7 @@ exports.url_recipe =  (req, res) => {
     })
     
     if(!myRecipe) {
-        return res.render('pages/page404')
+        return res.render('404')
     }
     
     return res.render('pages/site/myRecipe', {myRecipe})
@@ -22,9 +22,9 @@ exports.url_recipe =  (req, res) => {
 
 //ADMIN
 
-// exports.adm_index = (req, res) => {
-//     res.render('pages/admin/index')
-// }
+exports.adm_index = (req, res) => {
+    res.render('pages/admin/index', {recipes})
+}
 
 
 

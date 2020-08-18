@@ -30,7 +30,7 @@ header {
     padding: 30px;
     display: flex;
     align-items: center;
-    background-color: va(--color-white);
+    background-color: var(--color-white);
 }
 
 header ul {
@@ -87,18 +87,17 @@ header ul a {
     margin-top: 50px;
 }
 
-.receitas main,
-.receitas-page {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-}
-
 .receitas h2 {
     margin-bottom: 20px;
     color: var(--color-black);
     font-size: 24px;
     line-height: 34px;
+}
+
+.receitas-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
 }
 
 .receita-item img {
@@ -117,18 +116,44 @@ header ul a {
     transform: scale(1.1);
 }
 
+.receitas-page-admin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.receita-item-admin {
+    display: flex;
+}
+
+.receita-item-admin div {
+    display: flex;
+    flex-direction: column;
+}
+
+.receita-item-admin div img {
+    width: 172px;
+    height: 80px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
 .linkRecipe {
     text-decoration: none;
 }
 
-.receita-item p {
+.receita-item p,
+.receita-item-admin div p {
     font-size: 18px;
     line-height: 28px;
     color: var(--color-black);
     cursor: pointer;
 }
 
-.receita-item span {
+.receita-item span,
+.receita-item-admin div span {
     font-size: 14px;
     line-height: 28px;
     color: var(--color-black-light);
@@ -174,7 +199,7 @@ footer {
     height: 62px;
 }
 
-.modal-overlay {
+/* .modal-overlay {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
@@ -218,8 +243,7 @@ footer {
     font-size: 18px;
     line-height: 28px;
     color: var(--color-black-light);
-    margin-bottom: 50px;
-}
+} */
 
 .close {
     cursor: pointer;

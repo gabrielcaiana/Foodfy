@@ -1,5 +1,25 @@
-{% extends "layout.njk" %}
+{% extends 'layout.njk' %}
 
-{# {% block content %}
-    <h1>Gabriel Caiana</h1>
-{% endblock %} #}
+{% block header %}
+    <header style="background-color: black"></header>
+{% endblock %}
+
+{% block content %}
+    <section class="receitas">
+        <h2>Gerenciar receitas</h2>
+        <div class="receitas-page-admin">
+            {% for recipe in recipes %}
+                <div class="receita-item-admin">
+                    <div>
+                        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                    </div>
+                    <div>
+                        <p>{{recipe.title}}</p>
+                        <span>{{recipe.author}}</span>
+                         <a class="linkRecipe" href="/{{recipe.id}}">Visualizar</a>
+                    </div>
+                </div>
+                {% endfor%}
+            </div>
+        </section>
+    {% endblock %}
