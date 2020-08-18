@@ -20,8 +20,8 @@ routes.get("/admin/recipes/:id", recipes.show); // Exibir detalhes de uma receit
 // routes.put("/admin/recipes", recipes.put); // Editar uma receita
 // routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita 
 
-routes.get('*', (req, res) => {
-    res.render('pages/page404')
-})
+// routes.get('*', (req, res) => {
+//     res.render('pages/page404')
+// })
 
 module.exports = routes
