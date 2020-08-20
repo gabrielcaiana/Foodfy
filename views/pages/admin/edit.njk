@@ -8,17 +8,16 @@
 
 {% block content %}
     <div class="container">
-        <div class="headerEdit">
-            <div class="headerTitle">
-                <h1>Editando receita</h1>
+        <form class="edit-recipe" method="POST" action="">
+            <div class="headerEdit">
+                <div class="headerTitle">
+                    <h1>Editando receita</h1>
+                </div>
+                <div class="headerActions">
+                    <a href="#"><button class="btn-delete">Deletar</button></a>
+                    <a href="#"><button>Salvar receita</button></a>
+                </div>
             </div>
-            <div class="headerActions">
-                <a href="#"><button class="btn-delete">Deletar</button></a>
-                <a href="#"><button>Salvar receita</button></a>
-            </div>
-        </div>
-
-        <form class="edit-recipe" method="POST" action="#">
             {% include "pages/admin/fields.njk" %}
         </form>
     </div>

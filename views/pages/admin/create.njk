@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block header %}
+ <header>
+  <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
+ </header>
+{% endblock %}
+
+{% block content %}
+ <form class="create-recipe" method="POST" action="/admin/recipes">
+  <div class="headerCreate">
+   <div class="headerTitle">
+    <h1>Criando receita</h1>
+   </div>
+   <div class="headerActions">
+    <a href="#">
+     <button>Salvar receita</button>
+    </a>
+   </div>
+  </div>
+  {% include "pages/admin/fields.njk" %}
+ </form>
+
+ {% endblock%}

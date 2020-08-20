@@ -59,3 +59,13 @@ exports.edit = (req, res) => {
 
   return res.render('pages/admin/edit')
 }
+
+exports.create = (req, res) => {
+  return res.render("pages/admin/create")
+}
+
+exports.post = (req, res) => {
+  req.body
+
+  res.send(req.body)
+}

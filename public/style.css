@@ -359,12 +359,14 @@ footer {
 }
 
 /* Página de edição*/
-.headerEdit {
+.headerEdit,
+.headerCreate {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 940px;
+    margin-bottom: 30px;
 }
 
 .headerTitle h1 {
@@ -382,7 +384,8 @@ footer {
     background-color: rgb(212, 45, 45);
 }
 
-.edit-recipe {
+.edit-recipe,
+.create-recipe {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -392,7 +395,8 @@ footer {
     padding: 30px 0;
 }
 
-.edit-recipe .item {
+.edit-recipe .item,
+.create-recipe .item {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -400,7 +404,8 @@ footer {
 }
 
 
-.edit-recipe .item input, textarea {
+.edit-recipe .item input, textarea,
+.create-recipe .item input, textarea {
     border-radius: 4px;
     border: 1px solid #dddddd;
     background-color: #fff;
@@ -408,7 +413,8 @@ footer {
     resize: none;
 }
 
-.edit-recipe .item label {
+.edit-recipe .item label,
+.create-recipe .item label {
     font-size: 16px;
     color: #111111;
     font-weight: bold;
