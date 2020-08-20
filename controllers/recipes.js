@@ -29,10 +29,10 @@ exports.adm_index = (req, res) => {
 };
 
 exports.show = (req, res) => {
-  const recipeId = req.params.id;
+  const {id} = req.params
 
   const myRecipe = recipes.recipes.find(function (myRecipe) {
-    if (myRecipe.id == recipeId) {
+    if (myRecipe.id == id) {
       return true;
     }
 });
@@ -40,4 +40,22 @@ exports.show = (req, res) => {
       return res.render("404");
     }
     return res.render("pages/admin/show", { myRecipe });
-};
+};  
+
+exports.edit = (req, res) => {
+  // const {id} = req.params
+
+  // const foundRecipe = recipes.recipes.find(function(recipe) {
+  //   return recipes.id == id
+  // })
+
+  // const recipe = {
+  //   ...foundRecipe
+  // }
+
+  // if(!foundRecipe) {
+  //   return res.render('404')
+  // }
+
+  return res.render('pages/admin/edit')
+}

@@ -10,8 +10,8 @@
     <section class="container">
         <header class="headerRecipe">
             <div>
-                <h1>Receita:{{myRecipe.title}}</h1>
-                <button>Editar receita</button>
+                <h1>Receita: {{myRecipe.title}}</h1>
+                <a href="/admin/recipes/{{myRecipe.id}}/edit"><button>Editar receita</button></a>
             </div>
             <img src="{{myRecipe.image}}" alt="{{myRecipe.title}}">
             <h2>{{myRecipe.title}}</h2>
