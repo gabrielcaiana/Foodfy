@@ -16,8 +16,8 @@
             {% for recipe in recipes %}
                 <a class="linkRecipe" href="/{{recipe.id}}">
                     <div class="receita-item">
-                        <img src="{{recipe.image}}" alt="{{recipe.title}}">
-                        <p class="title-modal">{{recipe.title}}</p>
+                        <img src="{{recipe.image_url}}" alt="{{recipe.title}}">
+                        <p class="title-modal">{{recipe.name}}</p>
                         <span class="autor-modal">{{recipe.author}}</span>
                     </div>
                 </a>

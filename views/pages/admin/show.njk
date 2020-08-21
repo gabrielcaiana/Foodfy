@@ -10,11 +10,11 @@
     <section class="container">
         <header class="headerRecipe">
             <div>
-                <h1>Receita: {{myRecipe.title}}</h1>
+                <h1>Receita: {{myRecipe.name}}</h1>
                 <a href="/admin/recipes/{{myRecipe.id}}/edit"><button>Editar receita</button></a>
             </div>
-            <img src="{{myRecipe.image}}" alt="{{myRecipe.title}}">
-            <h2>{{myRecipe.title}}</h2>
+            <img src="{{myRecipe.image_url}}" alt="{{myRecipe.name}}">
+            <h2>{{myRecipe.name}}</h2>
             <span>{{myRecipe.author}}</span>
         </header>
 
@@ -34,7 +34,11 @@
                     <h3>Modo de preparo
                         <span class="showItem">esconder</span></h3>
 
-                    <p class="descricao">{{myRecipe.preparation}}</p>
+                    <ul class="descricao">
+                        {% for preparation in myRecipe.preparation_mode %}
+                        <li>{{preparation}}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
 
                 <div class="conteudo">

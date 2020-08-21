@@ -103,6 +103,8 @@ header ul a {
 .receita-item img {
     width: 100%;
     max-width: 300px;
+    max-height: 100px;
+    object-fit: cover;
     border-radius: 15px;
     margin-bottom: 20px;
     cursor: pointer;

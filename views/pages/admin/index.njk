@@ -13,10 +13,10 @@
             {% for recipe in recipes %}
                 <div class="receita-item-admin">
                     <div>
-                        <img src="{{recipe.image}}" alt="{{recipe.title}}">
+                        <img src="{{recipe.image_url}}" alt="{{recipe.title}}">
                     </div>
                     <div>
-                        <p>{{recipe.title}}</p>
+                        <p>{{recipe.name}}</p>
                         <span>{{recipe.author}}</span>
                         <a class="linkRecipe" href="/admin/recipes/{{recipe.id}}">Visualizar</a>
                     </div>

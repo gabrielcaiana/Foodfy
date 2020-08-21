@@ -1,27 +1,42 @@
 {
   "recipes": [
     {
-      "image_url": "http://www.google.com",
+      "id": 1,
+      "name": "Torta de frango",
+      "author": "Gabriel Caiana",
+      "image_url": "https://delyshows.com.br/wp-content/uploads/2019/10/torta-frango-massa-liquidificador-delyshows.jpg",
       "ingredients": [
-        "sdgdsgdsg",
-        "dfbbfdb"
+        "wwogweg",
+        "iohoihoi",
+        "oihioh"
       ],
-      "preparation-mode": [
-        "dfbdfb",
-        "ddgdgsd",
-        "sdgdg"
+      "preparation_mode": [
+        "oihio",
+        "oihioh",
+        "ohoihio",
+        "ihoihih"
       ],
-      "information": "sdgdg"
+      "information": "ihiohoihoih"
     },
     {
-      "image_url": "http://www.google.com",
+      "id": 2,
+      "name": "Bolo de chocolate",
+      "author": "Gabriel Caiana",
+      "image_url": "https://www.oetker.com.br/Recipe/Recipes/oetker.com.br/br-pt/baking/image-thumb__40008__RecipeDetail/bolo-de-aniversario-de-chocolate.jpg",
       "ingredients": [
-        "sdgsdgsdgds"
+        "2 xícaras chá de Farinha de Trigo",
+        "1 ½ xícaras chá de Açúcar",
+        "1 colher sopa de Fermento em pó quimico Dr. Oetker",
+        "½ xícara chá de Óleo de milho",
+        "2 unidades de Ovos (120 g)"
       ],
-      "preparation-mode": [
-        "dfbdf"
+      "preparation_mode": [
+        "Em um recipiente, misture a farinha, o açúcar e o Fermento em pó químico Dr. Oetker. Faça uma cavidade e junte o óleo, os ovos e mexa. Aos poucos, adicione o leite previamente misturado com o Chocolate em Pó 70% Cacau Dr. Oetker. Coloque em uma forma de 20cm untada com manteiga e polvilhada com farinha de trigo. Leve ao forno, preaquecido na temperatura média (180ºC), por cerca de 40 minutos. ",
+        "Leve a Cobertura sabor chocolate meio amargo Dr. Oetker ao microondas para derreter por 30 segundos. Mexa e volte ao microondas por mais 30 segundos. Junte a manteiga, o creme de leite e misture. Acrescente o Aroma Avelã Dr. Oetker  e mexa bem.  Mantenha em temperatura ambiente por no mínimo 2 horas antes de utilizar no bolo.",
+        "Depois de frio, corte o bolo em 4 camadas. Umedeça com leite misturado com Chocolate  em pó 70% Cacau Dr. Oetker (opcional) e espalhe 2 colheres (sopa) cheias do recheio. Cubra todo o bolo com a cobertura. Para a decoração, além dos confeitos Choc Bola e Choc Bolinha Dr. Oetker, utilize o Doce de Festa Brigadeiro Dr. Oetker para enrolar brigadeiros e passe no confeito Pepita Dr. Oetker.  Sirva o bolo em temperatura ambiente. "
       ],
-      "information": "dbdfb"
+      "information": "Aproveite essa receita deliciosa :D"
     }
-  ]
+  ],
+  "_locals": {}
 }

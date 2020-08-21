@@ -3,8 +3,8 @@
 {% block content %}
     <section class="container">
         <header class="headerRecipe">
-            <img src="{{myRecipe.image}}" alt="{{myRecipe.title}}">
-            <h1>{{myRecipe.title}}</h1>
+            <img src="{{myRecipe.image_url}}" alt="{{myRecipe.name}}">
+            <h1>{{myRecipe.name}}</h1>
             <span>{{myRecipe.author}}</span>
         </header>
 
@@ -13,9 +13,9 @@
                 <h2>Ingredientes
                     <span class="showItem">esconder</span></h2>
 
-                    <ul class="descricao">
-                        {% for ingredients in myRecipe.ingredients%}
-                            <li>{{ingredients}}</li>
+                <ul class="descricao">
+                    {% for ingredients in myRecipe.ingredients%}
+                        <li>{{ingredients}}</li>
                         {% endfor%}
                     </ul>
                 </div>
@@ -24,7 +24,11 @@
                     <h3>Modo de preparo
                         <span class="showItem">esconder</span></h3>
 
-                    <p class="descricao">{{myRecipe.preparation}}</p>
+                    <ul class="descricao">
+                        {% for preparation in myRecipe.preparation_mode %}
+                            <li>{{preparation}}</li>
+                        {% endfor %}
+                    </ul>
                 </div>
 
                 <div class="conteudo">

@@ -74,7 +74,23 @@ exports.post = (req, res) => {
     }
   }
 
-  recipes.recipes.push(req.body)
+  let {name, author, image_url, ingredients, preparation_mode, information} = req.body
+  let id = 1
+  const lastRecipe = recipes.recipes[recipes.recipes.length -1]
+  
+  if(lastRecipe) {
+    id = lastRecipe.id + 1
+  }
+
+  recipes.recipes.push({
+    id,
+    name,
+    author,
+    image_url,
+    ingredients,
+    preparation_mode,
+    information
+  })
 
   fs.writeFile("data.json", JSON.stringify(recipes, null, 2), function(err){
     if(err) {
