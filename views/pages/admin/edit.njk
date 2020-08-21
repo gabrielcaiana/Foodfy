@@ -8,17 +8,19 @@
 
 {% block content %}
     <div class="container">
-        <form class="edit-recipe" method="POST" action="/admin/recipes">
+        <form class="edit-recipe" method="POST" action="/admin/recipes?_method=PUT">
             <div class="headerEdit">
                 <div class="headerTitle">
                     <h1>Editando receita</h1>
                 </div>
                 <div class="headerActions">
                     <a href="#"><button class="btn-delete">Deletar</button></a>
-                    <a href="#"><button>Salvar receita</button></a>
+                    <a href="#" type="submit"><button>Salvar receita</button></a>
                 </div>
             </div>
             {% include "pages/admin/fields.njk" %}
+
+            <input type="hidden" name="id" value="{{ recipe.id }}">
         </form>
     </div>
 {% endblock %}

@@ -1,41 +1,95 @@
 {
   "recipes": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Torta de frango",
-      "author": "Gabriel Caiana",
+      "author": "Gabriel Caiana Guedes",
       "image_url": "https://delyshows.com.br/wp-content/uploads/2019/10/torta-frango-massa-liquidificador-delyshows.jpg",
       "ingredients": [
-        "wwogweg",
-        "iohoihoi",
-        "oihioh"
+        "wwogweg,iohoihoi,oihioh"
       ],
       "preparation_mode": [
-        "oihio",
-        "oihioh",
-        "ohoihio",
-        "ihoihih"
+        "oihio,oihioh,ohoihio,ihoihih"
       ],
       "information": "ihiohoihoih"
     },
     {
-      "id": 2,
-      "name": "Bolo de chocolate",
+      "id": "2",
+      "name": "Bolo de chocolatet5",
       "author": "Gabriel Caiana",
       "image_url": "https://www.oetker.com.br/Recipe/Recipes/oetker.com.br/br-pt/baking/image-thumb__40008__RecipeDetail/bolo-de-aniversario-de-chocolate.jpg",
       "ingredients": [
-        "2 xícaras chá de Farinha de Trigo",
-        "1 ½ xícaras chá de Açúcar",
-        "1 colher sopa de Fermento em pó quimico Dr. Oetker",
-        "½ xícara chá de Óleo de milho",
-        "2 unidades de Ovos (120 g)"
+        "2 xícaras chá de Farinha de Trigo,1 ½ xícaras chá de Açúcar,1 colher sopa de Fermento em pó quimico Dr. Oetker,½ xícara chá de Óleo de milho,2 unidades de Ovos (120 g)"
       ],
       "preparation_mode": [
-        "Em um recipiente, misture a farinha, o açúcar e o Fermento em pó químico Dr. Oetker. Faça uma cavidade e junte o óleo, os ovos e mexa. Aos poucos, adicione o leite previamente misturado com o Chocolate em Pó 70% Cacau Dr. Oetker. Coloque em uma forma de 20cm untada com manteiga e polvilhada com farinha de trigo. Leve ao forno, preaquecido na temperatura média (180ºC), por cerca de 40 minutos. ",
-        "Leve a Cobertura sabor chocolate meio amargo Dr. Oetker ao microondas para derreter por 30 segundos. Mexa e volte ao microondas por mais 30 segundos. Junte a manteiga, o creme de leite e misture. Acrescente o Aroma Avelã Dr. Oetker  e mexa bem.  Mantenha em temperatura ambiente por no mínimo 2 horas antes de utilizar no bolo.",
-        "Depois de frio, corte o bolo em 4 camadas. Umedeça com leite misturado com Chocolate  em pó 70% Cacau Dr. Oetker (opcional) e espalhe 2 colheres (sopa) cheias do recheio. Cubra todo o bolo com a cobertura. Para a decoração, além dos confeitos Choc Bola e Choc Bolinha Dr. Oetker, utilize o Doce de Festa Brigadeiro Dr. Oetker para enrolar brigadeiros e passe no confeito Pepita Dr. Oetker.  Sirva o bolo em temperatura ambiente. "
+        "Em um recipiente, misture a farinha, o açúcar e o Fermento em pó químico Dr. Oetker. Faça uma cavidade e junte o óleo, os ovos e mexa. Aos poucos, adicione o leite previamente misturado com o Chocolate em Pó 70% Cacau Dr. Oetker. Coloque em uma forma de 20cm untada com manteiga e polvilhada com farinha de trigo. Leve ao forno, preaquecido na temperatura média (180ºC), por cerca de 40 minutos. ,Leve a Cobertura sabor chocolate meio amargo Dr. Oetker ao microondas para derreter por 30 segundos. Mexa e volte ao microondas por mais 30 segundos. Junte a manteiga, o creme de leite e misture. Acrescente o Aroma Avelã Dr. Oetker  e mexa bem.  Mantenha em temperatura ambiente por no mínimo 2 horas antes de utilizar no bolo.,Depois de frio, corte o bolo em 4 camadas. Umedeça com leite misturado com Chocolate  em pó 70% Cacau Dr. Oetker (opcional) e espalhe 2 colheres (sopa) cheias do recheio. Cubra todo o bolo com a cobertura. Para a decoração, além dos confeitos Choc Bola e Choc Bolinha Dr. Oetker, utilize o Doce de Festa Brigadeiro Dr. Oetker para enrolar brigadeiros e passe no confeito Pepita Dr. Oetker.  Sirva o bolo em temperatura ambiente. "
       ],
       "information": "Aproveite essa receita deliciosa :D"
+    },
+    {
+      "id": 3,
+      "name": "Hamburguer artenasal",
+      "author": "Gisely Almeida",
+      "image_url": "https://exame.com/wp-content/uploads/2020/05/mafe-studio-LV2p9Utbkbw-unsplash.jpg?quality=70&strip=info",
+      "ingredients": [
+        "500g de patinho moido",
+        "1 Pão de brioche",
+        "1 Tomate",
+        "Alface",
+        "Bacon"
+      ],
+      "preparation_mode": [
+        "wegwegwegw",
+        "wegweg",
+        "egweg"
+      ],
+      "information": "Aproveite!!!"
+    },
+    {
+      "id": 4,
+      "name": "Pizza",
+      "author": "Gabriel",
+      "image_url": "https://uploads.metropoles.com/wp-content/uploads/2020/07/08151632/fatias-de-pizza-em-marmore-sobre-a-tabua-de-cortar_23-2147926088.jpg",
+      "ingredients": [
+        "Mussarela",
+        "Tomate",
+        "Farinha de trigo",
+        "agua",
+        "pimenta"
+      ],
+      "preparation_mode": [
+        "dgdwgw",
+        "dgwgwe",
+        "ehreherherh"
+      ],
+      "information": "ewjnwegjwegnj"
+    },
+    {
+      "id": "5",
+      "name": "Torta de morango",
+      "author": "Lucineia",
+      "image_url": "https://www.receitasnestle.com.br/images/default-source/recipes/torta-espelhada-de-morango_alta.jpg",
+      "ingredients": [
+        "hfsnhdfbdfbndfnb,dfndfndfndf,dfndfnfdnd",
+        "ddwwdgww"
+      ],
+      "preparation_mode": [
+        "dfndfndfnfd,dfndfnfd,fdndfnf"
+      ],
+      "information": "essa receita é uma delicia"
+    },
+    {
+      "id": "51",
+      "name": "Pastel de carne",
+      "author": "Gabriel",
+      "image_url": "https://www.comidaereceitas.com.br/wp-content/uploads/2007/11/Pastel_feiraaoo.jpg",
+      "ingredients": [
+        "dgdsglds,lkjljlk,lkjkljlkj"
+      ],
+      "preparation_mode": [
+        "lkjlkjlkjl,lkjlkjlkj"
+      ],
+      "information": "ljklj"
     }
   ],
   "_locals": {}

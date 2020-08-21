@@ -44,21 +44,21 @@ exports.show = (req, res) => {
 };  
 
 exports.edit = (req, res) => {
-  // const {id} = req.params
+  const {id} = req.params
 
-  // const foundRecipe = recipes.recipes.find(function(recipe) {
-  //   return recipes.id == id
-  // })
+  const foundRecipe = recipes.recipes.find(function(recipe) {
+    return recipe.id == id
+  })
+      const recipe = {
+        ...foundRecipe,
+        // ingredients: foundRecipe.ingredients.split(',')
+      }
 
-  // const recipe = {
-  //   ...foundRecipe
-  // }
+  if(!foundRecipe) {
+    return res.render('404')
+  }
 
-  // if(!foundRecipe) {
-  //   return res.render('404')
-  // }
-
-  return res.render('pages/admin/edit')
+  return res.render('pages/admin/edit', {recipe})
 }
 
 exports.create = (req, res) => {
@@ -99,4 +99,36 @@ exports.post = (req, res) => {
 
     return res.redirect('/admin/recipes')
   })
+}
+
+exports.put = (req, res) => {
+  const {id} = req.body
+  let index = 0
+
+  const foundRecipe = recipes.recipes.find(function(recipe, foundIndex) {
+    if(id == recipe.id) {
+      index = foundIndex
+      return true
+    }
+  })
+
+  if(!foundRecipe) {
+    return res.render('404')
+  }
+
+  const recipe = {
+    ...foundRecipe,
+    ...req.body
+  }
+
+  recipes.recipes[index] = recipe
+
+  fs.writeFile("data.json", JSON.stringify(recipes, null, 2), function(err){
+    if(err) {
+      return res.send("Write error!")
+    }
+
+    return res.redirect(`/admin/recipes/${id}`)
+  })
+  
 }

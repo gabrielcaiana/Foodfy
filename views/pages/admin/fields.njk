@@ -1,22 +1,22 @@
 <div class="name_recipe item">
 <label>Nome da receita</label>
-<input type="text" name="name" placeholder="Informe o nome da receita">
+<input type="text" name="name" value="{{recipe.name}}" placeholder="Informe o nome da receita">
 </div>
 
 <div class="author_recipe item">
 <label>Nome do autor</label>
-<input type="text" name="author" placeholder="Informe o nome do autor">
+<input type="text" name="author" value="{{recipe.author}}" placeholder="Informe o nome do autor">
 </div>
 
 <div class="img-recipe item">
 <label>Imagem da receita</label>
-<input type="url" name="image_url" placeholder="Informe a URL da imagem">
+<input type="url" name="image_url" value="{{recipe.image_url}}" placeholder="Informe a URL da imagem">
 </div>
 
 <div id="ingredients" class="item">
   <div class="ingredient item">
   <label>Ingredientes</label>
-    <input type="text" name="ingredients[]" value="" placeholder="informe o ingrediente" />
+    <input type="text" name="ingredients[]" value="{{recipe.ingredients}}" placeholder="informe o ingrediente" />
   </div>
 </div>
 <button type="button" class="add-ingredient btn-add ">Adicionar ingrediente</button>
@@ -24,13 +24,13 @@
 <div id="preparation-mode" class="item">
   <div class="preparation item">
   <label>Modo de preparo</label>
-    <input type="text" name="preparation_mode[]" value="" placeholder="informe o modo de preparo" />
+    <input type="text" name="preparation_mode[]" value="{{recipe.preparation_mode}}" placeholder="informe o modo de preparo" />
   </div>
 </div>
 <button type="button" class="btn-add add-preparation">Adicionar novo passo</button>
 
 <div class="informations item">
 <label for="information">Informações adicionais</label>
-<textarea  id="information" name="information" value="Digite alguma informação adicional" rows="5" cols="33" placeholder="Digite alguma informação adicional da receita..."></textarea>
+<textarea  id="information" name="information" rows="5" cols="33">{{recipe.information}}</textarea>
 </div>
 

@@ -140,6 +140,7 @@ header ul a {
     margin-bottom: 20px;
     cursor: pointer;
     margin-right: 16px;
+    object-fit: cover;
 }
 
 .linkRecipe {
