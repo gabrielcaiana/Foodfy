@@ -7,18 +7,19 @@
 {% endblock %}
 
 {% block content %}
- <form class="create-recipe" method="POST" action="/admin/recipes">
-  <div class="headerCreate">
-   <div class="headerTitle">
-    <h1>Criando receita</h1>
+ <div class="container">
+  <form class="create-recipe" method="POST" action="/admin/recipes">
+   <div class="headerCreate">
+    <div class="headerTitle">
+     <h1>Criando receita</h1>
+    </div>
+    <div class="headerActions">
+     <a href="#">
+      <button >Salvar receita</button>
+     </a>
+    </div>
    </div>
-   <div class="headerActions">
-    <a href="#">
-     <button>Salvar receita</button>
-    </a>
-   </div>
-  </div>
-  {% include "pages/admin/fields.njk" %}
- </form>
-
+   {% include "pages/admin/fields.njk" %}
+  </form>
+ </div>
  {% endblock%}
