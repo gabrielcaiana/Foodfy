@@ -74,13 +74,13 @@ exports.post = (req, res) => {
     }
   }
 
-  fs.writeFile("data.json", JSON.stringify(req.body), function(err){
+  recipes.recipes.push(req.body)
+
+  fs.writeFile("data.json", JSON.stringify(recipes, null, 2), function(err){
     if(err) {
       return res.send('Write file error')
     }
 
     return res.redirect('/admin/recipes')
   })
-
-  // return res.send(req.body)
 }

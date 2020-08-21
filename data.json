@@ -1,1 +1,27 @@
-{"image_url":"http://www.google.com","ingredients":["fddsgd"],"preparation-mode":["sdbsd"],"information":"fddf"}
+{
+  "recipes": [
+    {
+      "image_url": "http://www.google.com",
+      "ingredients": [
+        "sdgdsgdsg",
+        "dfbbfdb"
+      ],
+      "preparation-mode": [
+        "dfbdfb",
+        "ddgdgsd",
+        "sdgdg"
+      ],
+      "information": "sdgdg"
+    },
+    {
+      "image_url": "http://www.google.com",
+      "ingredients": [
+        "sdgsdgsdgds"
+      ],
+      "preparation-mode": [
+        "dfbdf"
+      ],
+      "information": "dbdfb"
+    }
+  ]
+}
