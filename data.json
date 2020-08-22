@@ -1,21 +1,8 @@
 {
   "recipes": [
     {
-      "id": "1",
-      "name": "Torta de frango",
-      "author": "Gabriel Caiana Guedes",
-      "image_url": "https://delyshows.com.br/wp-content/uploads/2019/10/torta-frango-massa-liquidificador-delyshows.jpg",
-      "ingredients": [
-        "wwogweg,iohoihoi,oihioh"
-      ],
-      "preparation_mode": [
-        "oihio,oihioh,ohoihio,ihoihih"
-      ],
-      "information": "ihiohoihoih"
-    },
-    {
       "id": "2",
-      "name": "Bolo de chocolatet5",
+      "name": "Bolo de chocolate",
       "author": "Gabriel Caiana",
       "image_url": "https://www.oetker.com.br/Recipe/Recipes/oetker.com.br/br-pt/baking/image-thumb__40008__RecipeDetail/bolo-de-aniversario-de-chocolate.jpg",
       "ingredients": [
@@ -46,21 +33,15 @@
       "information": "Aproveite!!!"
     },
     {
-      "id": 4,
-      "name": "Pizza",
+      "id": "4",
+      "name": "Pizza de queijo",
       "author": "Gabriel",
       "image_url": "https://uploads.metropoles.com/wp-content/uploads/2020/07/08151632/fatias-de-pizza-em-marmore-sobre-a-tabua-de-cortar_23-2147926088.jpg",
       "ingredients": [
-        "Mussarela",
-        "Tomate",
-        "Farinha de trigo",
-        "agua",
-        "pimenta"
+        "Mussarela,Tomate,Farinha de trigo,agua,pimenta"
       ],
       "preparation_mode": [
-        "dgdwgw",
-        "dgwgwe",
-        "ehreherherh"
+        "dgdwgw,dgwgwe,ehreherherh"
       ],
       "information": "ewjnwegjwegnj"
     },
@@ -70,26 +51,12 @@
       "author": "Lucineia",
       "image_url": "https://www.receitasnestle.com.br/images/default-source/recipes/torta-espelhada-de-morango_alta.jpg",
       "ingredients": [
-        "hfsnhdfbdfbndfnb,dfndfndfndf,dfndfnfdnd",
-        "ddwwdgww"
+        "hfsnhdfbdfbndfnb,dfndfndfndf,dfndfnfdnd,ddwwdgww"
       ],
       "preparation_mode": [
         "dfndfndfnfd,dfndfnfd,fdndfnf"
       ],
       "information": "essa receita é uma delicia"
-    },
-    {
-      "id": "51",
-      "name": "Pastel de carne",
-      "author": "Gabriel",
-      "image_url": "https://www.comidaereceitas.com.br/wp-content/uploads/2007/11/Pastel_feiraaoo.jpg",
-      "ingredients": [
-        "dgdsglds,lkjljlk,lkjkljlkj"
-      ],
-      "preparation_mode": [
-        "lkjlkjlkjl,lkjlkjlkj"
-      ],
-      "information": "ljklj"
     }
   ],
   "_locals": {}

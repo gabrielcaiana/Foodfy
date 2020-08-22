@@ -28,7 +28,6 @@ exports.url_recipe = (req, res) => {
 exports.adm_index = (req, res) => {
   res.render("pages/admin/index", { recipes }.recipes);
 };
-
 exports.show = (req, res) => {
   const {id} = req.params
 
@@ -42,7 +41,6 @@ exports.show = (req, res) => {
     }
     return res.render("pages/admin/show", { myRecipe });
 };  
-
 exports.edit = (req, res) => {
   const {id} = req.params
 
@@ -60,11 +58,9 @@ exports.edit = (req, res) => {
 
   return res.render('pages/admin/edit', {recipe})
 }
-
 exports.create = (req, res) => {
   return res.render("pages/admin/create")
 }
-
 exports.post = (req, res) => {
   const keys = Object.keys(req.body)
   
@@ -100,7 +96,6 @@ exports.post = (req, res) => {
     return res.redirect('/admin/recipes')
   })
 }
-
 exports.put = (req, res) => {
   const {id} = req.body
   let index = 0
@@ -131,4 +126,19 @@ exports.put = (req, res) => {
     return res.redirect(`/admin/recipes/${id}`)
   })
   
+}
+exports.delete = (req, res) => {
+  const {id} = req.body
+  const filteredRecipe = recipes.recipes.filter(function(recipe){
+    return recipe.id != id
+  })
+
+  recipes.recipes = filteredRecipe
+
+  fs.writeFile('data.json', JSON.stringify(recipes, null, 2), function(err) {
+    if(err) {
+      return res.send("Write file error")
+    }
+    return res.redirect("/admin/recipes/")
+  })
 }

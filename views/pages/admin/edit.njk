@@ -1,26 +1,29 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-    <header>
-        <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
-    </header>
+  <header>
+    <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
+  </header>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <form class="edit-recipe" method="POST" action="/admin/recipes?_method=PUT">
-            <div class="headerEdit">
-                <div class="headerTitle">
-                    <h1>Editando receita</h1>
-                </div>
-                <div class="headerActions">
-                    <a href="#"><button class="btn-delete">Deletar</button></a>
-                    <a href="#" type="submit"><button>Salvar receita</button></a>
-                </div>
-            </div>
-            {% include "pages/admin/fields.njk" %}
+  <div class="container">
+    <form class="edit-recipe" method="POST" action="/admin/recipes?_method=PUT">
+      <div class="headerEdit">
+        <div class="headerTitle">
+          <h1>Editando receita</h1>
+        </div>
+        <div class="headerActions">
+          <button class="save_recipe" type="submit">Salvar receita</button>
+        </div>
+      </div>
+      {% include "pages/admin/fields.njk" %}
+      <input type="hidden" name="id" value="{{ recipe.id }}">
+    </form>
 
-            <input type="hidden" name="id" value="{{ recipe.id }}">
-        </form>
-    </div>
+    <form method="POST" action="/admin/recipes?_method=DELETE">
+      <input type="hidden" name="id" value="{{ recipe.id }}">
+      <button type="submit" class="btn-delete">Deletar</button>
+    </form>
+  </div>
 {% endblock %}

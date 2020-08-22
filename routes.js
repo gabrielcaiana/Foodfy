@@ -19,7 +19,7 @@ routes.get("/admin/recipes/:id/edit", recipes.edit); // Mostrar formulário de e
 
 routes.post("/admin/recipes", recipes.post); // Cadastrar nova receita
 routes.put("/admin/recipes", recipes.put); // Editar uma receita
-// routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita 
+routes.delete("/admin/recipes", recipes.delete); // Deletar uma receita 
 
 // routes.get('*', (req, res) => {
 //     res.render('pages/page404')
