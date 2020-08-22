@@ -14,25 +14,6 @@
       "information": "Aproveite essa receita deliciosa :D"
     },
     {
-      "id": 3,
-      "name": "Hamburguer artenasal",
-      "author": "Gisely Almeida",
-      "image_url": "https://exame.com/wp-content/uploads/2020/05/mafe-studio-LV2p9Utbkbw-unsplash.jpg?quality=70&strip=info",
-      "ingredients": [
-        "500g de patinho moido",
-        "1 Pão de brioche",
-        "1 Tomate",
-        "Alface",
-        "Bacon"
-      ],
-      "preparation_mode": [
-        "wegwegwegw",
-        "wegweg",
-        "egweg"
-      ],
-      "information": "Aproveite!!!"
-    },
-    {
       "id": "4",
       "name": "Pizza de queijo",
       "author": "Gabriel",
