@@ -1,8 +1,16 @@
 {% extends 'layout.njk' %}
 
 {% block header %}
-    <header>
-        <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
+    <header class="headerAdmin">
+      <div class="headerAdmin__content">
+        <a class="headerAdmin__content__logo" href="/"><img src="/assets/image/foodfy-white.png" alt="Foodfy"></a>
+        <nav class="headerAdmin__content__nav">
+          <ul class="headerAdmin__content__nav__list">
+            <li class="headerAdmin__content__nav__list__item"><a class="active" href="#">receitas</a></li>
+            <li class="headerAdmin__content__nav__list__item"><a href="#">chefs</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 {% endblock %}
 

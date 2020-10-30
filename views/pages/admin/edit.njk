@@ -1,29 +1,43 @@
 {% extends "layout.njk" %}
 
 {% block header %}
-  <header>
-    <a href="/"><img src="/assets/image/logo.png" alt="Foodfy"></a>
+  <header class="headerAdmin">
+    <div class="headerAdmin__content">
+      <a class="headerAdmin__content__logo" href="/"><img src="/assets/image/foodfy-white.png" alt="Foodfy"></a>
+      <nav class="headerAdmin__content__nav">
+        <ul class="headerAdmin__content__nav__list">
+          <li class="headerAdmin__content__nav__list__item">
+            <a class="active" href="#">receitas</a>
+          </li>
+          <li class="headerAdmin__content__nav__list__item">
+            <a href="#">chefs</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 {% endblock %}
 
 {% block content %}
   <div class="container">
-    <form class="edit-recipe" method="POST" action="/admin/recipes?_method=PUT">
-      <div class="headerEdit">
-        <div class="headerTitle">
-          <h1>Editando receita</h1>
+    <div class="adminEdit__content">
+      <form class="edit-recipe" method="POST" action="/admin/recipes?_method=PUT">
+        <div class="headerEdit">
+          <div class="headerTitle">
+            <h1>Editando receita</h1>
+          </div>
+          <div class="headerActions">
+            <button class="save_recipe" type="submit">Salvar receita</button>
+          </div>
         </div>
-        <div class="headerActions">
-          <button class="save_recipe" type="submit">Salvar receita</button>
-        </div>
-      </div>
-      {% include "pages/admin/fields.njk" %}
-      <input type="hidden" name="id" value="{{ recipe.id }}">
-    </form>
+        {% include "pages/admin/fields.njk" %}
+        <input type="hidden" name="id" value="{{ recipe.id }}">
+      </form>
 
-    <form id="form-delete" method="POST" action="/admin/recipes?_method=DELETE">
-      <input type="hidden" name="id" value="{{ recipe.id }}">
-      <button type="submit" class="btn-delete">Deletar</button>
-    </form>
+      <form id="form-delete" method="POST" action="/admin/recipes?_method=DELETE">
+        <input type="hidden" name="id" value="{{ recipe.id }}">
+        <button type="submit" class="btn-delete">Deletar</button>
+      </form>
+    </div>
   </div>
 {% endblock %}
