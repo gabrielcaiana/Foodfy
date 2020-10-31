@@ -1,0 +1,39 @@
+.headerAdmin {
+ width: 100%;
+ align-items: center;
+ background-color: $color-black;
+ display: flex;
+ justify-content: center;
+ max-width: 100vw;
+ height: 80px;
+ padding: 0;
+
+ &__content {
+  width: 940px;
+  display: flex;
+  align-items: center;
+
+  &__nav {
+   display: flex;
+   margin-left: 50px;
+
+   &__list {
+    margin: 0;
+    list-style: none;
+    display: flex; 
+
+    &__item a {
+     color: $color-white;
+     text-transform: uppercase;
+     text-decoration: none;
+     margin-right: 16px;
+
+     &.active {
+      color: $color-white;
+      font-weight: bold;
+     }
+    }
+   }
+  }
+ }
+}

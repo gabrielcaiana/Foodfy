@@ -3,7 +3,7 @@
 {% block header %}
   <header class="headerAdmin">
     <div class="headerAdmin__content">
-      <a class="headerAdmin__content__logo" href="/"><img src="/assets/image/foodfy-white.png" alt="Foodfy"></a>
+      <a class="headerAdmin__content__logo" href="/admin/recipes"><img src="/assets/image/foodfy-white.png" alt="Foodfy"></a>
       <nav class="headerAdmin__content__nav">
         <ul class="headerAdmin__content__nav__list">
           <li class="headerAdmin__content__nav__list__item">
@@ -19,7 +19,6 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container">
     <div class="adminEdit__content">
       <form class="edit-recipe" method="POST" action="/admin/recipes?_method=PUT">
         <div class="headerEdit">
@@ -39,5 +38,4 @@
         <button type="submit" class="btn-delete">Deletar</button>
       </form>
     </div>
-  </div>
 {% endblock %}

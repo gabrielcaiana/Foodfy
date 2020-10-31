@@ -1,0 +1,29 @@
+.headerRecipe {
+  text-align: center;
+  margin-top: 50px;
+
+  &__edit {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+
+    &__btn button {
+      width: 136px;
+      height: 37px;
+      border-radius: 4px;
+      background-color: #6558c3;
+      font-weight: bold;
+      color: #fff;
+      border: none;
+      transition: 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        background-color: blueviolet;
+      }
+    }
+  }
+}
+

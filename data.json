@@ -3,7 +3,7 @@
     {
       "id": "2",
       "name": "Bolo de chocolate Amargo",
-      "author": "Gabriel Caiana",
+      "author": "Gabriel Caiana Guedes",
       "image_url": "https://www.oetker.com.br/Recipe/Recipes/oetker.com.br/br-pt/baking/image-thumb__40008__RecipeDetail/bolo-de-aniversario-de-chocolate.jpg",
       "ingredients": [
         "2 xícaras chá de Farinha de Trigo,1 ½ xícaras chá de Açúcar,1 colher sopa de Fermento em pó quimico Dr. Oetker,½ xícara chá de Óleo de milho,2 unidades de Ovos (120 g)"
@@ -42,23 +42,6 @@
         "wegewg"
       ],
       "information": "wegweg"
-    },
-    {
-      "id": "411",
-      "name": "teste",
-      "author": "gabriel",
-      "image_url": "https://delyshows.com.br/wp-content/uploads/2019/10/torta-frango-massa-liquidificador-delyshows.jpg",
-      "ingredients": [
-        "dbdsb",
-        "ççjçl",
-        "lçkçlk"
-      ],
-      "preparation_mode": [
-        "lkçlkç",
-        "çlkçlkç",
-        "çklçkçl"
-      ],
-      "information": "çlklçk"
     }
   ],
   "_locals": {}

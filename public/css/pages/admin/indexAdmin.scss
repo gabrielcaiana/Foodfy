@@ -1,0 +1,15 @@
+.receitas {
+  &__adminTitle {
+    margin-bottom: 32px;
+  }
+
+  &__gridAdmin {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  &__link {
+    text-decoration: none;
+    font-size: 14px;
+  }
+}
