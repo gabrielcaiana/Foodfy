@@ -1,5 +1,5 @@
-const botaoEsconder = document.querySelectorAll(".showItem");
-const conteudo = document.querySelectorAll(".descricao");
+const botaoEsconder = document.querySelectorAll(".recipe__content__subtitle__show");
+const conteudo = document.querySelectorAll(".recipe__content__description");
 
 for (let i = 0; i < botaoEsconder.length; i++) {
   botaoEsconder[i].addEventListener("click", function () {

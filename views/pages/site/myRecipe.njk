@@ -1,43 +1,42 @@
 {% extends 'layout.njk' %}
 
 {% block content %}
-    <section class="container">
-        <header class="headerRecipe">
-            <img src="{{myRecipe.image_url}}" alt="{{myRecipe.name}}">
-            <h1>{{myRecipe.name}}</h1>
-            <span>{{myRecipe.author}}</span>
-        </header>
+  <div class="content recipe">
+    <header class="recipe__header">
+      <img class="recipe__header__image" src="{{myRecipe.image_url}}" alt="{{myRecipe.name}}">
+      <h1 class="recipe__header__name">{{myRecipe.name}}</h1>
+      <span class="recipe__header__author">por <b>{{myRecipe.author}}</b></span>
+    </header>
 
-        <article class="recipeContent">
-            <div class="conteudo">
-                <h2>Ingredientes
-                    <span class="showItem">esconder</span></h2>
+    <article>
+      <div class="recipe__content">
+        <h2 class="recipe__content__subtitle">Ingredientes
+          <span class="recipe__content__subtitle__show">esconder</span></h2>
 
-                <ul class="descricao">
-                    {% for ingredients in myRecipe.ingredients%}
-                        <li>{{ingredients}}</li>
-                        {% endfor%}
-                    </ul>
-                </div>
+        <ul class="recipe__content__description">
+          {% for ingredients in myRecipe.ingredients%}
+            <li class="recipe__content__description__list">{{ingredients}}</li>
+            {% endfor%}
+          </ul>
+        </div>
 
-                <div class="conteudo">
-                    <h3>Modo de preparo
-                        <span class="showItem">esconder</span></h3>
+        <div class="recipe__content">
+          <h3 class="recipe__content__subtitle">Modo de preparo
+            <span class="recipe__content__subtitle__show">esconder</span></h3>
 
-                    <ul class="descricao">
-                        {% for preparation in myRecipe.preparation_mode %}
-                            <li>{{preparation}}</li>
-                        {% endfor %}
-                    </ul>
-                </div>
+          <ul class="recipe__content__description">
+            {% for preparation in myRecipe.preparation_mode %}
+              <li class="recipe__content__description__list">{{preparation}}</li>
+            {% endfor %}
+          </ul>
+        </div>
 
-                <div class="conteudo">
-                    <h4>Informações Adicionais
-                        <span class="showItem">esconder</span></h4>
+        <div class="recipe__content">
+          <h4 class="recipe__content__subtitle">Informações Adicionais
+          <span class="recipe__content__subtitle__show">esconder</span></h4>
+          <p class="recipe__content__description">{{myRecipe.information}}</p>
+        </div>
 
-                    <p class="descricao">{{myRecipe.information}}</p>
-                </div>
-
-            </article>
-        </section>
-        {% endblock%}
+      </article>
+    </div>
+    {% endblock%}
