@@ -1,28 +1,30 @@
 {% extends 'layout.njk' %}
 
 {% block content %}
+	<div class="content">
 
-    <section class="banner">
-        <div class="content-text">
-            <h1>As melhores receitas</h1>
-            <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
-        </div>
-        <div class="content-image"><img src="assets/image/chef.png" alt="chef"></div>
-    </section>
+		<section class="banner">
+			<div class="banner__content">
+				<h1 class="banner__content__title">As melhores receitas</h1>
+				<p class="banner__content__text">Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+			</div>
+			<div class="content-image"><img src="assets/image/chef.png" alt="chef"></div>
+		</section>
 
-    <section class="receitas">
-        <h2>Mais acessadas</h2>
-        <div class="receitas-page">
-            {% for recipe in recipes %}
-                <a class="linkRecipe" href="/{{recipe.id}}">
-                    <div class="receita-item">
-                        <img src="{{recipe.image_url}}" alt="{{recipe.title}}">
-                        <p class="title-modal">{{recipe.name}}</p>
-                        <span class="autor-modal">{{recipe.author}}</span>
-                    </div>
-                </a>
-            {% endfor%}
-            </div>
-        </section>
+		<section class="receitas">
+			<h2 class="receitas__title">Mais acessadas</h2>
+			<div class="receitas__grid">
+				{% for recipe in recipes %}
+					<a class="receita" href="/{{recipe.id}}">
+						<div class="receita__content">
+							<img class="receita__content__thumb" src="{{recipe.image_url}}" alt="{{recipe.title}}">
+							<p class="receita__content__name">{{recipe.name}}</p>
+							<span class="receita__content__author">{{recipe.author}}</span>
+						</div>
+					</a>
+					{% endfor%}
+				</div>
+			</section>
 
-    {% endblock %}
+		</div>
+	{% endblock %}

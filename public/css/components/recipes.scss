@@ -1,0 +1,51 @@
+.receitas {
+  width: 100%;
+  height: 100%;
+  max-width: 940px;
+  margin-top: 50px;
+
+  &__title {
+    margin-bottom: 20px;
+    color: $color-black;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+.receita {
+  transition: transform 0.2s;
+  text-decoration: none;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &__content {
+    &__thumb {
+      width: 100%;
+      max-width: 300px;
+      max-height: 100px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      cursor: pointer;
+    }
+
+    &__name {
+      font-size: 18px;
+      line-height: 28px;
+      color: $color-black;
+    }
+
+    &__author {
+      font-size: 14px;
+      line-height: 28px;
+      color: $color-black-light;
+    }
+  }
+}
