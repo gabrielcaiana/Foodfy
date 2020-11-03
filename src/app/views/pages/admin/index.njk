@@ -25,8 +25,8 @@
       {% for recipe in recipes %}
         <div class="receita transform" href="/{{recipe.id}}">
           <div class="receita__content">
-            <img class="receita__content__thumb" src="{{recipe.image_url}}" alt="{{recipe.title}}">
-            <p class="receita__content__name">{{recipe.name}}</p>
+            <img class="receita__content__thumb" src="{{recipe.image}}" alt="{{recipe.title}}">
+            <p class="receita__content__name">{{recipe.title}}</p>
             <span class="receita__content__author">{{recipe.author}}</span>
           </div>
           <a class="receitas__link" href="/admin/recipes/{{recipe.id}}">Visualizar</a>

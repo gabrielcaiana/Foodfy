@@ -1,6 +1,12 @@
+const db = require("../../config/db");
+const { date } = require("../../lib/utils");
+
 module.exports = {
   index(req, res) {
-    return res.render("pages/site/index");
+    db.query(`SELECT * FROM recipes`, function(err, results) {
+      if (err) throw `Database error! ${err}`;
+      return res.render("pages/site/index", {recipes: results.rows});
+    })
   },
   recipes(req, res) {
     res.render("pages/site/recipes");
@@ -28,6 +34,41 @@ module.exports = {
         return res.send("Please, fill all fields!");
       }
     }
+
+    const {
+      title,
+      image,
+      ingredients,
+      preparation,
+      information
+    } = req.body;
+
+    const query = `
+    INSERT INTO recipes (
+      title,
+      image,
+      ingredients,
+      preparation,
+      information,
+      created_at
+    )VALUES ($1, $2, $3, $4, $5, $6)
+    RETURNING id
+    `;
+
+    const values = [
+      title,
+      image,
+      ingredients,
+      preparation,
+      information,
+      date(Date.now()).iso,
+    ];
+
+    db.query(query, values, function (err, results) {
+      if (err) throw `Database error! ${err}`;
+
+      return res.redirect("pages/admin/index");
+    });
   },
   put(req, res) {
     const keys = Object.keys(req.body);
