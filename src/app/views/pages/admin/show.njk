@@ -22,15 +22,15 @@
   <div class="content">
     <header class="headerRecipe">
       <div class="headerRecipe__edit">
-        <h1 class="headerRecipe__edit__title">Receita:{{myRecipe.name}}</h1>
-        <a class="headerRecipe__edit__btn" href="/admin/recipes/{{myRecipe.id}}/edit">
+        <h1 class="headerRecipe__edit__title">Receita: {{recipes.title}}</h1>
+        <a class="headerRecipe__edit__btn" href="/admin/recipes/{{recipes.id}}/edit">
           <button>Editar receita</button>
         </a>
       </div>
-      <img class="recipe__header__image" src="{{myRecipe.image_url}}" alt="{{myRecipe.name}}">
-      <h1 class="recipe__header__name">{{myRecipe.name}}</h1>
+      <img class="recipe__header__image" src="{{recipes.image}}" alt="{{recipes.title}}">
+      <h1 class="recipe__header__name">{{recipes.title}}</h1>
       <span class="recipe__header__author">por
-        <b>{{myRecipe.author}}</b>
+        <b>{{recipes.author}}</b>
       </span>
     </header>
 
@@ -40,7 +40,7 @@
           <span class="recipe__content__subtitle__show">esconder</span></h2>
 
         <ul class="recipe__content__description">
-          {% for ingredients in myRecipe.ingredients%}
+          {% for ingredients in recipes.ingredients%}
             <li class="recipe__content__description__list">{{ingredients}}</li>
             {% endfor%}
           </ul>
@@ -51,7 +51,7 @@
             <span class="recipe__content__subtitle__show">esconder</span></h3>
 
           <ul class="recipe__content__description">
-            {% for preparation in myRecipe.preparation_mode %}
+            {% for preparation in recipes.preparation %}
               <li class="recipe__content__description__list">{{preparation}}</li>
             {% endfor %}
           </ul>
@@ -60,7 +60,7 @@
         <div class="recipe__content">
           <h4 class="recipe__content__subtitle">Informações Adicionais
             <span class="recipe__content__subtitle__show">esconder</span></h4>
-          <p class="recipe__content__description">{{myRecipe.information}}</p>
+          <p class="recipe__content__description">{{recipes.information}}</p>
         </div>
 
       </article>

@@ -33,10 +33,12 @@ module.exports = {
   find(id, callback) {
     console.log(id)
    db.query(`SELECT * FROM recipes WHERE id = $1`, [id], function (err, results) {
-     if(err) throw `Database error ${err}`;
+     if(err) throw `Database error`;
      callback(results.rows[0])
    });
   },
-  update(data, callback) {},
+  update(data, callback) {
+    
+  },
   delete(data, callback) {},
 };
