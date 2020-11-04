@@ -54,6 +54,12 @@
       line-height: 28px;
       padding: 2px;
       color: #444444;
+
+      &__list {
+        &::before {
+          content:(" - ");
+        }
+      }
     }
   }
 }

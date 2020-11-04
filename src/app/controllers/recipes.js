@@ -1,21 +1,32 @@
 const db = require("../../config/db");
-const { date } = require("../../lib/utils");
+const recipe = require("../models/recipe");
 
 module.exports = {
   index(req, res) {
-    db.query(`SELECT * FROM recipes`, function(err, results) {
+    db.query(`SELECT * FROM recipes`, (err, results) => {
       if (err) throw `Database error! ${err}`;
       return res.render("pages/site/index", {recipes: results.rows});
     })
   },
   recipes(req, res) {
-    res.render("pages/site/recipes");
+    db.query(`SELECT * FROM recipes`, (err, results) => {
+      if (err) throw `Database error! ${err}`;
+      return res.render("pages/site/recipes", {recipes: results.rows});
+    })
   },
   url_recipe(req, res) {
-    return;
+    const id = req.params.id
+    recipe.find(id, (recipes) => {
+      if(!recipes) return res.send("Recipes not found!")
+      
+      return res.render("pages/site/myRecipe", {recipes});
+    })
   },
   adm_index(req, res) {
-    res.render("pages/admin/index");
+    db.query(`SELECT * FROM recipes`, (err, results) =>  {
+      if (err) throw `Database error! ${err}`;
+      return res.render("pages/admin/index", {recipes: results.rows});
+    })
   },
   show(req, res) {
     return;
@@ -31,43 +42,12 @@ module.exports = {
 
     for (key of keys) {
       if (req.body[key] == "") {
-        return res.send("Please, fill all fields!");
+        return res.send("Please, fill all fields");
       }
     }
 
-    const {
-      title,
-      image,
-      ingredients,
-      preparation,
-      information
-    } = req.body;
-
-    const query = `
-    INSERT INTO recipes (
-      title,
-      image,
-      ingredients,
-      preparation,
-      information,
-      created_at
-    )VALUES ($1, $2, $3, $4, $5, $6)
-    RETURNING id
-    `;
-
-    const values = [
-      title,
-      image,
-      ingredients,
-      preparation,
-      information,
-      date(Date.now()).iso,
-    ];
-
-    db.query(query, values, function (err, results) {
-      if (err) throw `Database error! ${err}`;
-
-      return res.redirect("pages/admin/index");
+    recipe.create(req.body, () => {
+      return res.redirect("/admin/recipes");
     });
   },
   put(req, res) {

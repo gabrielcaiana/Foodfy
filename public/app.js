@@ -27,7 +27,7 @@ function addIngredient() {
 }
 
 function addPreparation() {
-  const preparation = document.querySelector("#preparation-mode");
+  const preparation = document.querySelector("#preparation");
   const fieldContainer = document.querySelectorAll(".preparation");
 
   // Realiza um clone do último ingrediente adicionado

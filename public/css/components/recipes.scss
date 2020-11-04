@@ -36,7 +36,8 @@
       cursor: pointer;
     }
 
-    &__name {
+    &__name,&__title {
+      max-width: 300px;
       font-size: 18px;
       line-height: 28px;
       color: $color-black;
