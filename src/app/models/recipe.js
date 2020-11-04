@@ -34,6 +34,11 @@ module.exports = {
     console.log(id)
    db.query(`SELECT * FROM recipes WHERE id = $1`, [id], function (err, results) {
      if(err) throw `Database error`;
+
+    //  const recipe = results.rows
+    //  const teste = recipe[0].ingredients  
+    //  console.log(teste)  
+    console.log(results.rows[0])
      callback(results.rows[0])
    });
   },

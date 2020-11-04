@@ -40,7 +40,7 @@ module.exports = {
     const id = req.params.id;
     recipe.find(id, (recipe) => {
       if (!recipe) return res.send("Recipes not found!");
-      
+
       return res.render("pages/admin/edit", { recipe });
     });
   },
