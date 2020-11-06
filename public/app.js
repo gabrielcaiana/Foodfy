@@ -20,24 +20,26 @@ function addIngredient() {
 
   const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
 
-  if (newField.children[1].value == "") return false;
+  if (newField.children[0].value == "") return false;
 
-  newField.children[1].value = "";
+  console.log(newField.children[0])
+
+  newField.children[0].value = "";
   ingredients.appendChild(newField);
 }
 
 function addPreparation() {
-  const preparation = document.querySelector("#preparation");
+  const preparation = document.querySelector("#preparations");
   const fieldContainer = document.querySelectorAll(".preparation");
 
   // Realiza um clone do último ingrediente adicionado
   const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
 
   // Não adiciona um novo input se o último tem um valor vazio
-  if (newField.children[1].value == "") return false;
+  if (newField.children[0].value == "") return false;
 
   // Deixa o valor do input vazio
-  newField.children[1].value = "";
+  newField.children[0].value = "";
   preparation.appendChild(newField);
 }
 

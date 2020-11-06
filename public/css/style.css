@@ -292,7 +292,8 @@ textarea {
   border: 1px solid #dddddd;
   background-color: #fff;
   padding: 20px 20px;
-  resize: none; }
+  resize: none;
+  width: 100%; }
 
 .edit-recipe .item label,
 .create-recipe .item label {

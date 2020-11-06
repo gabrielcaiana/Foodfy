@@ -45,7 +45,7 @@ module.exports = {
     });
   },
   create(req, res) {
-    return res.render("pages/admin/create");
+    return res.render("pages/admin/create", { create: true });
   },
   post(req, res) {
     const keys = Object.keys(req.body);
