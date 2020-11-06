@@ -68,6 +68,10 @@ module.exports = {
         return res.send("Please, fill all fields!");
       }
     }
+
+    recipe.update(req.body, () => {
+      return res.redirect(`/admin/recipes/${req.body.id}`)
+    })
   },
   delete(req, res) {
     return;
