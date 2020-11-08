@@ -5,7 +5,6 @@ for (let i = 0; i < botaoEsconder.length; i++) {
   botaoEsconder[i].addEventListener("click", function () {
     if (conteudo[i].style.display == "none") {
       this.innerText = "Ocultar";
-      console.log(this);
       conteudo[i].style.display = "block";
     } else {
       conteudo[i].style.display = "none";
@@ -22,10 +21,10 @@ function addIngredient() {
 
   if (newField.children[0].value == "") return false;
 
-  console.log(newField.children[0])
-
   newField.children[0].value = "";
   ingredients.appendChild(newField);
+
+
 }
 
 function addPreparation() {
@@ -37,6 +36,14 @@ function addPreparation() {
 
   // Não adiciona um novo input se o último tem um valor vazio
   if (newField.children[0].value == "") return false;
+
+  // console.log(fieldContainer)
+  // for(item of fieldContainer) {
+  //   if(item.children[0].value == null) {
+  //     console.log("vazio")
+  //   }
+  //   console.log(item.children[0].value)
+  // }
 
   // Deixa o valor do input vazio
   newField.children[0].value = "";

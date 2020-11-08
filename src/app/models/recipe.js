@@ -15,11 +15,21 @@ module.exports = {
   RETURNING id
   `;
 
+    let arrayIngredients = data.ingredients;
+    let filteredIngredients = arrayIngredients.filter((ingredient) => {
+      return ingredient != "";
+    });
+
+    let arrayPreparation = data.preparation;
+    let filteredPreparations = arrayPreparation.filter((preparation) => {
+      return preparation != "";
+    });
+
     const values = [
       data.title,
       data.image,
-      data.ingredients,
-      data.preparation,
+      filteredIngredients,
+      filteredPreparations,
       data.information,
       date(Date.now()).iso,
     ];
@@ -52,20 +62,36 @@ module.exports = {
   WHERE id = $7
   `;
 
+  let arrayIngredients = data.ingredients;
+  let filteredIngredients = arrayIngredients.filter((ingredient) => {
+    return ingredient != "";
+  });
+
+  let arrayPreparation = data.preparation;
+  let filteredPreparations = arrayPreparation.filter((preparation) => {
+    return preparation != "";
+  });
+
     const values = [
       data.title,
       data.image,
-      data.ingredients,
-      data.preparation,
+      filteredIngredients,
+      filteredPreparations,
       data.information,
       date(Date.now()).iso,
       data.id,
     ];
 
     db.query(query, values, (err, results) => {
-      if (err) throw `Database error ${err}`
+      if (err) throw `Database error ${err}`;
       callback();
-    })
+    });
   },
-  delete(data, callback) {},
+  delete(id, callback) {
+    db.query(`DELETE FROM recipes WHERE id = $1`, [id], (err, results) => {
+      if (err) throw `Database error ${err}`;
+
+      callback();
+    });
+  },
 };
