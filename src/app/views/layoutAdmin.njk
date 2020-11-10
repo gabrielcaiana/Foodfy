@@ -1,4 +1,4 @@
-{% extends "layout.njk" %}
+{% extends 'layout.njk' %}
 
 {% block header %}
   <header class="headerAdmin">
@@ -10,7 +10,7 @@
             <a class="active" href="#">receitas</a>
           </li>
           <li class="headerAdmin__content__nav__list__item">
-            <a href="#">chefs</a>
+            <a href="/admin/chefs">chefs</a>
           </li>
         </ul>
       </nav>
@@ -18,20 +18,3 @@
   </header>
 {% endblock %}
 
-{% block content %}
- <div class="container">
-  <form class="create-recipe" method="POST" action="/admin/recipes">
-   <div class="headerCreate">
-    <div class="headerTitle">
-     <h1>Criando receita</h1>
-    </div>
-    <div class="headerActions">
-     <a href="#">
-      <button class="btn-salvar" type="submit">Salvar receita</button>
-     </a>
-    </div>
-   </div>
-   {% include "pages/admin/fields.njk" %}
-  </form>
- </div>
- {% endblock%}

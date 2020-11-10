@@ -1,22 +1,4 @@
-{% extends "layout.njk" %}
-
-{% block header %}
-  <header class="headerAdmin">
-    <div class="headerAdmin__content">
-      <a class="headerAdmin__content__logo" href="/admin/recipes"><img src="/assets/image/foodfy-white.png" alt="Foodfy"></a>
-      <nav class="headerAdmin__content__nav">
-        <ul class="headerAdmin__content__nav__list">
-          <li class="headerAdmin__content__nav__list__item">
-            <a class="active" href="#">receitas</a>
-          </li>
-          <li class="headerAdmin__content__nav__list__item">
-            <a href="#">chefs</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-{% endblock %}
+{% extends "layoutAdmin.njk" %}
 
 {% block content %}
     <div class="adminEdit__content">
@@ -29,7 +11,7 @@
             <button class="btn-salvar" type="submit">Salvar receita</button>
           </div>
         </div>
-        {% include "pages/admin/fields.njk" %}
+        {% include "pages/admin/recipes/fields.njk" %}
         <input type="hidden" name="id" value="{{ recipe.id }}">
       </form>
 

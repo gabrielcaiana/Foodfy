@@ -25,7 +25,7 @@ module.exports = {
   adm_index(req, res) {
     db.query(`SELECT * FROM recipes`, (err, results) => {
       if (err) throw `Database error! ${err}`;
-      return res.render("pages/admin/index", { recipes: results.rows });
+      return res.render("pages/admin/recipes/index", { recipes: results.rows });
     });
   },
   show(req, res) {
@@ -33,7 +33,7 @@ module.exports = {
     recipe.find(id, (recipes) => {
       if (!recipes) return res.send("Recipes not found!");
 
-      return res.render("pages/admin/show", { recipes });
+      return res.render("pages/admin/recipes/show", { recipes });
     });
   },
   edit(req, res) {
@@ -41,11 +41,11 @@ module.exports = {
     recipe.find(id, (recipe) => {
       if (!recipe) return res.send("Recipes not found!");
 
-      return res.render("pages/admin/edit", { recipe });
+      return res.render("pages/admin/recipes/edit", { recipe });
     });
   },
   create(req, res) {
-    return res.render("pages/admin/create", { create: true });
+    return res.render("pages/admin/recipes/create", { create: true });
   },
   post(req, res) {
     const keys = Object.keys(req.body);

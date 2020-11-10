@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {# <link rel="icon" type="image/png" href="/favicon.png"/> #}
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
     {% block head %}
       <title>Foodfy | Home</title>
     {% endblock %}
@@ -31,10 +31,18 @@
               <li class="header__content__list__item">
                 <a class="header__content__list__item__link" href="/recipes">Receitas</a>
               </li>
+
+              <li class="header__content__list__item">
+                <a class="header__content__list__item__link" href="/chefs">Chefs</a>
+              </li>
             </ul>
+            <form class="header__content__search" aciton="/recipes" method="GET">
+              <input class="header__content__search__input" type="text" name="filter" placeholder="Procure por uma receita" value="{{ filter }}">
+              <button class="header__content__search__button" type="submit">Buscar</button>
+            </form>
           </header>
         {% endblock %}
-        {% block content %}{% endblock %} 
+        {% block content %}{% endblock %}
 
       </div>
       <footer class="footer">

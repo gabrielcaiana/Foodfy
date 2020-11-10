@@ -12,6 +12,7 @@
   align-items: center;
   display: flex;
   width: 940px;
+  position: relative;
 
   &__list {
    list-style: none;
@@ -25,6 +26,32 @@
      color: $color-black;
      text-decoration: none;
     }
+   }
+  }
+
+  &__search {
+   position: absolute;
+   right: 0;
+
+   &__input {
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 37px;
+    margin-right: 8px;
+    padding: 0 16px; 
+    width: 246px;
+   }
+
+   &__button {
+    background-color: $color-primary;
+    border: none;
+    border-radius: 4px;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: bold;
+    height: 37px;
+    width: 91px;
    }
   }
  }

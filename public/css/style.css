@@ -30,7 +30,8 @@ body {
   .header__content {
     align-items: center;
     display: flex;
-    width: 940px; }
+    width: 940px;
+    position: relative; }
     .header__content__list {
       list-style: none;
       margin-left: 122px; }
@@ -40,6 +41,26 @@ body {
         .header__content__list__item__link {
           color: #111111;
           text-decoration: none; }
+    .header__content__search {
+      position: absolute;
+      right: 0; }
+      .header__content__search__input {
+        border: 1px solid #DDDDDD;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 37px;
+        margin-right: 8px;
+        padding: 0 16px;
+        width: 246px; }
+      .header__content__search__button {
+        background-color: #6558C3;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        height: 37px;
+        width: 91px; }
 
 .headerAdmin {
   width: 100%;
