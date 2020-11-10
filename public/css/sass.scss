@@ -5,9 +5,12 @@
 @import "./components/header";
 @import "./components/headerAdmin.scss";
 
+@import "./components/chefs.scss";
+
 @import "./pages/site/index";
 @import "./pages/site/about";
 @import "./pages/site/recipeDetalhe";
+@import "./pages/site/chefs.scss";
 
 @import "./pages/admin/indexAdmin";
 @import "./pages/admin/show";

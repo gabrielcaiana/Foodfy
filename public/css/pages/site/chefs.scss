@@ -1,0 +1,29 @@
+.chef {
+ text-decoration: none;
+ &__card {
+  display: flex;
+  align-items: center;
+
+  &__image {
+   height: 64px;
+   width: 64px;
+   border-radius: 50%;
+   object-fit: cover;
+  }
+
+  &__content {
+   margin-left: 12px;
+   display: flex;
+   flex-direction: column;
+
+   &__name {
+    color: $color-black;
+   }
+
+   &__recipes {
+    color: $color-gray;
+    margin-top: 4px;
+   }
+  }
+ }
+}

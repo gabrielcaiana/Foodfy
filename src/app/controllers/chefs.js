@@ -1,8 +1,13 @@
+const db = require("../../config/db");
 const chefs = require("../models/chefs");
 
 module.exports = {
   index(req, res) {
-    return res.render("pages/site/chefs");
+    db.query(`SELECT * FROM chefs`, (err, results) => {
+      if(err) throw `Databse error ${err}`
+      console.log(results.rows[0])
+      return res.render("pages/site/chefs", {chefs: results.rows});
+    })
   },
   admin_index(req, res) {
     return res.render("pages/admin/chefs/chefs");

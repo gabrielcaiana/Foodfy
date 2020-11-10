@@ -19,5 +19,5 @@ module.exports = {
 
       callback(results.rows[0]);
     });
-  },
+  }
 };
