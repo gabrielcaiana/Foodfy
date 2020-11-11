@@ -1,6 +1,8 @@
-.headerRecipe {
+.headerRecipe,
+.headerChef {
   text-align: center;
   margin-top: 50px;
+  width: 940px;
 
   &__edit {
     display: flex;
@@ -8,6 +10,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
+
+    &__title {
+      color: $color-black;
+      font-size: 24px;
+    }
 
     &__btn button {
       width: 136px;
@@ -25,5 +32,23 @@
       }
     }
   }
-}
 
+  &__image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 50px 0 16px 0;
+  }
+
+  &__name {
+    color: $color-black;
+    font-size: 36px;
+    margin-bottom: 4px;
+  }
+
+  &__recipes {
+    font-size: 20px;
+    color: $color-black-light;
+  }
+}

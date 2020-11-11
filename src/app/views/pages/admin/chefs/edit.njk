@@ -2,21 +2,21 @@
 
 {% block content %}
   <div class="adminEdit__content">
-    <form class="edit-recipe" method="POST" action="/admin/recipes?_method=PUT">
+    <form class="edit-chefs" method="POST" action="/admin/chefs?_method=PUT">
       <div class="headerEdit">
         <div class="headerTitle">
-          <h1>Editando receita</h1>
+          <h1>Editando chef</h1>
         </div>
         <div class="headerActions">
-          <button class="btn-salvar" type="submit">Salvar receita</button>
+          <button class="btn-salvar" type="submit">Salvar chef</button>
         </div>
       </div>
-      {% include "pages/admin/recipes/fields.njk" %}
-      <input type="hidden" name="id" value="{{ recipe.id }}">
+      {% include "pages/admin/chefs/fields.njk" %}
+      <input type="hidden" name="id" value="{{ chef.id }}">
     </form>
 
-    <form id="form-delete" method="POST" action="/admin/recipes?_method=DELETE">
-      <input type="hidden" name="id" value="{{ recipe.id }}">
+    <form id="form-delete" method="POST" action="/admin/chefs?_method=DELETE">
+      <input type="hidden" name="id" value="{{ chef.id }}">
       <button type="submit" class="btn-delete">Deletar</button>
     </form>
   </div>

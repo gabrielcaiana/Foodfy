@@ -23,8 +23,6 @@ function addIngredient() {
 
   newField.children[0].value = "";
   ingredients.appendChild(newField);
-
-
 }
 
 function addPreparation() {
@@ -36,14 +34,6 @@ function addPreparation() {
 
   // Não adiciona um novo input se o último tem um valor vazio
   if (newField.children[0].value == "") return false;
-
-  // console.log(fieldContainer)
-  // for(item of fieldContainer) {
-  //   if(item.children[0].value == null) {
-  //     console.log("vazio")
-  //   }
-  //   console.log(item.children[0].value)
-  // }
 
   // Deixa o valor do input vazio
   newField.children[0].value = "";
@@ -57,12 +47,3 @@ document
 document
   .querySelector(".add-preparation")
   .addEventListener("click", addPreparation);
-  
-
-const formDelete = document.querySelector("#form-delete");
-formDelete.addEventListener("submit", function (event) {
-  const confirmation = confirm("Deseja Deletar?");
-  if (!confirmation) {
-    event.preventDefault();
-  }
-});

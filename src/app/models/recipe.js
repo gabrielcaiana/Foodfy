@@ -45,7 +45,7 @@ module.exports = {
       err,
       results
     ) {
-      if (err) throw `Database error`;
+      if (err) throw `Database error ${err}`;
 
       callback(results.rows[0]);
     });

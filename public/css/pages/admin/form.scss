@@ -1,5 +1,7 @@
 .headerEdit,
-.headerCreate {
+.headerCreate,
+.edit-chefs,
+.recipeEdit {
  width: 100%;
  display: flex;
  justify-content: space-between;
@@ -46,6 +48,7 @@
 }
 
 .edit-recipe,
+.edit-chefs,
 .create-recipe {
  display: flex;
  flex-direction: column;
@@ -57,6 +60,7 @@
 }
 
 .edit-recipe .item,
+.edit-chefs .item,
 .create-recipe .item {
  display: flex;
  flex-direction: column;
@@ -65,6 +69,7 @@
 }
 
 .edit-recipe .item input,
+.edit-chefs .item input,
 textarea,
 .create-recipe .item input,
 textarea {
@@ -77,6 +82,7 @@ textarea {
 }
 
 .edit-recipe .item label,
+.edit-chefs .item label,
 .create-recipe .item label {
  font-size: 16px;
  color: #111111;

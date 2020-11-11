@@ -1,0 +1,23 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block content %}
+ <div class="content">
+  <header class="headerChef">
+   <div class="headerChef__edit">
+    <h1 class="headerChef__edit__title">Chef:
+     {{chef.name}}</h1>
+    <a class="headerChef__edit__btn" href="/admin/chefs/{{chef.id}}/edit">
+     <button>Editar chef</button>
+    </a>
+   </div>
+   <img class="headerChef__image" src="{{chef.avatar_url}}" alt="{{chef.name}}">
+   <h1 class="headerChef__name">{{chef.name}}</h1>
+   <span class="headerChef__recipes">4 receitas</span>
+  </header>
+
+  <section class="receitas">
+   <h2 class="receitas__adminTitle">Receitas</h2>
+   <div class="receitas__gridAdmin"></div>
+  </section>
+ </div>
+ {% endblock%}

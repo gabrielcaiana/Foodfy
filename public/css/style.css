@@ -96,10 +96,18 @@ body {
   height: 100%;
   max-width: 940px;
   margin-top: 50px; }
+  .chefs__title {
+    margin-bottom: 32px; }
   .chefs__grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px; }
+
+.chef__card__content__link {
+  color: #6558C3;
+  font-size: 14px;
+  margin-top: 5px;
+  text-decoration: none; }
 
 .banner {
   align-items: center;
@@ -253,18 +261,27 @@ body {
   gap: 40px; }
 .receitas__link {
   text-decoration: none;
-  font-size: 14px; }
+  font-size: 14px;
+  color: #6558C3; }
 
-.headerRecipe {
+.headerRecipe,
+.headerChef {
   text-align: center;
-  margin-top: 50px; }
-  .headerRecipe__edit {
+  margin-top: 50px;
+  width: 940px; }
+  .headerRecipe__edit,
+  .headerChef__edit {
     display: flex;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 16px 0; }
-    .headerRecipe__edit__btn button {
+    .headerRecipe__edit__title,
+    .headerChef__edit__title {
+      color: #111111;
+      font-size: 24px; }
+    .headerRecipe__edit__btn button,
+    .headerChef__edit__btn button {
       width: 136px;
       height: 37px;
       border-radius: 4px;
@@ -274,11 +291,30 @@ body {
       border: none;
       transition: 0.3s;
       cursor: pointer; }
-      .headerRecipe__edit__btn button:hover {
+      .headerRecipe__edit__btn button:hover,
+      .headerChef__edit__btn button:hover {
         background-color: blueviolet; }
+  .headerRecipe__image,
+  .headerChef__image {
+    height: 200px;
+    width: 200px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 50px 0 16px 0; }
+  .headerRecipe__name,
+  .headerChef__name {
+    color: #111111;
+    font-size: 36px;
+    margin-bottom: 4px; }
+  .headerRecipe__recipes,
+  .headerChef__recipes {
+    font-size: 20px;
+    color: #777777; }
 
 .headerEdit,
-.headerCreate {
+.headerCreate,
+.edit-chefs,
+.recipeEdit {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -319,6 +355,7 @@ body {
   background-color: #d42d2d; }
 
 .edit-recipe,
+.edit-chefs,
 .create-recipe {
   display: flex;
   flex-direction: column;
@@ -329,6 +366,7 @@ body {
   padding: 30px 0; }
 
 .edit-recipe .item,
+.edit-chefs .item,
 .create-recipe .item {
   display: flex;
   flex-direction: column;
@@ -336,6 +374,7 @@ body {
   margin: 10px 0; }
 
 .edit-recipe .item input,
+.edit-chefs .item input,
 textarea,
 .create-recipe .item input,
 textarea {
@@ -347,6 +386,7 @@ textarea {
   width: 95.5%; }
 
 .edit-recipe .item label,
+.edit-chefs .item label,
 .create-recipe .item label {
   font-size: 16px;
   color: #111111;
