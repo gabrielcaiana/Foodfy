@@ -3,10 +3,17 @@ const chefs = require("../models/chefs");
 
 module.exports = {
   index(req, res) {
-    db.query(`SELECT * FROM chefs`, (err, results) => {
-      if (err) throw `Databse error ${err}`;
-      return res.render("pages/site/chefs", { chefs: results.rows });
-    });
+    db.query(
+      `SELECT chefs.*, count(recipes) AS total_recipes
+        FROM chefs
+        LEFT JOIN recipes ON (recipes.chef_id = chefs.id)
+      GROUP BY chefs.id
+      ORDER BY total_recipes DESC`,
+      (err, results) => {
+        if (err) throw `Databse error ${err}`;
+        return res.render("pages/site/chefs", { chefs: results.rows });
+      }
+    );
   },
   admin_index(req, res) {
     db.query(`SELECT * FROM chefs`, (err, results) => {
@@ -56,12 +63,12 @@ module.exports = {
     }
 
     chefs.update(req.body, () => {
-      return res.redirect(`/admin/chefs/${req.body.id}`)
-    }) 
+      return res.redirect(`/admin/chefs/${req.body.id}`);
+    });
   },
   delete(req, res) {
     chefs.delete(req.body.id, () => {
-      return res.redirect("/admin/chefs")
-    })
-  }
+      return res.redirect("/admin/chefs");
+    });
+  },
 };
