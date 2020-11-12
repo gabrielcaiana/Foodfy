@@ -1,3 +1,22 @@
+//Active menu
+const currentPage = location.pathname;
+
+const menuItens = document.querySelectorAll(".header__content__list__item__link");
+
+for(item of menuItens) {
+  if(currentPage.includes(item.getAttribute("href"))) {
+    item.classList.add("active");
+  }
+}
+
+const menuItensAdmin = document.querySelectorAll(".headerAdmin__content__nav__list__item__link");
+
+for(item of menuItensAdmin) {
+  if(currentPage.includes(item.getAttribute("href"))) {
+    item.classList.add("activeAdmin");
+  }
+}
+
 const botaoEsconder = document.querySelectorAll(".recipe__content__subtitle__show");
 const conteudo = document.querySelectorAll(".recipe__content__description");
 

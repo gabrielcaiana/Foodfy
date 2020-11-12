@@ -61,6 +61,10 @@ body {
         font-weight: bold;
         height: 37px;
         width: 91px; }
+  .header .active {
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold; }
 
 .headerAdmin {
   width: 100%;
@@ -83,11 +87,11 @@ body {
         list-style: none;
         display: flex; }
         .headerAdmin__content__nav__list__item a {
-          color: #fff;
+          color: #999999;
           text-transform: uppercase;
           text-decoration: none;
           margin-right: 16px; }
-          .headerAdmin__content__nav__list__item a.active {
+          .headerAdmin__content__nav__list__item a.activeAdmin {
             color: #fff;
             font-weight: bold; }
 
@@ -414,6 +418,29 @@ textarea {
   cursor: pointer; }
   .btn-salvar:hover {
     background-color: blueviolet; }
+
+.select-wrapper {
+  border-radius: 4px;
+  border: 1px solid #dddddd;
+  padding: 20px 0;
+  position: relative; }
+
+.select-wrapper:after {
+  content: url("../../../assets/icons/arrow.png");
+  position: absolute;
+  right: 16px; }
+
+.select {
+  padding: 0 20px;
+  width: 100%;
+  outline: none;
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  cursor: pointer; }
 
 .footer {
   width: 100%;

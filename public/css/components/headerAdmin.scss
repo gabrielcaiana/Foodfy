@@ -23,12 +23,12 @@
     display: flex; 
 
     &__item a {
-     color: $color-white;
+     color: #999999;
      text-transform: uppercase;
      text-decoration: none;
      margin-right: 16px;
 
-     &.active {
+     &.activeAdmin {
       color: $color-white;
       font-weight: bold;
      }

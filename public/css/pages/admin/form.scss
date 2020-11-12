@@ -71,7 +71,7 @@
 .edit-recipe .item input,
 .edit-chefs .item input,
 textarea,
-.create-recipe .item input,
+.create-recipe .item input,,
 textarea {
  border-radius: 4px;
  border: 1px solid #dddddd;
@@ -115,3 +115,30 @@ textarea {
   background-color: blueviolet;
  }
 }
+
+.select-wrapper {
+ border-radius: 4px;
+ border: 1px solid #dddddd;
+ padding: 20px 0;
+ position: relative;
+}
+
+.select-wrapper:after {
+ content: url('../../../assets/icons/arrow.png');
+ position: absolute;
+ right: 16px;
+}
+
+.select {
+ padding: 0 20px;
+ width: 100%;
+ outline: none;
+ border: none;
+ -webkit-appearance: none;
+ -ms-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+ background-color: transparent;
+ cursor: pointer;
+}
+
