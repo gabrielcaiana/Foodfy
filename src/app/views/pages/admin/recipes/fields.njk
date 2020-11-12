@@ -11,10 +11,13 @@
 <div class="item">
   <label>Chef</label>
   <div class="select-wrapper">
-    <select class="select">
+    <select name="chef" class="select">
       <option value="" disabled="disabled" selected="selected">Select your option</option>
-      <option value="Option 1">Option 1</option>
-      <option value="Option 2">Option 2</option>
+      {% for chef in chefsSelectOptions %}
+      <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected {%endif%}>
+        {{chef.name}}
+      </option>
+      {% endfor %}
     </select>
     <span class="focus"></span>
   </div>

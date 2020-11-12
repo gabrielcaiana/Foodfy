@@ -36,16 +36,24 @@ module.exports = {
       return res.render("pages/admin/recipes/show", { recipes });
     });
   },
-  edit(req, res) {
-    const id = req.params.id;
-    recipe.find(id, (recipe) => {
-      if (!recipe) return res.send("Recipes not found!");
-
-      return res.render("pages/admin/recipes/edit", { recipe });
+  create(req, res) {
+    recipe.chefsSelectOptions((options) => {
+      return res.render("pages/admin/recipes/create", {
+        create: true,
+        chefsSelectOptions: options,
+      });
     });
   },
-  create(req, res) {
-    return res.render("pages/admin/recipes/create", { create: true });
+  edit(req, res) {
+    recipe.chefsSelectOptions((options) => {
+      recipe.find(req.params.id, (recipe) => {
+        if (!recipe) return res.send("Recipes not found!");
+        return res.render("pages/admin/recipes/edit", {
+          chefsSelectOptions: options,
+          recipe,
+        });
+      });
+    });
   },
   post(req, res) {
     const keys = Object.keys(req.body);
@@ -70,13 +78,13 @@ module.exports = {
     }
 
     recipe.update(req.body, () => {
-      return res.redirect(`/admin/recipes/${req.body.id}`)
-    })
+      return res.redirect(`/admin/recipes/${req.body.id}`);
+    });
   },
   delete(req, res) {
     recipe.delete(req.body.id, () => {
-      res.redirect("/admin/recipes")
-    })
+      res.redirect("/admin/recipes");
+    });
     return;
   },
 };
