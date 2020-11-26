@@ -2,7 +2,17 @@
 
 {%block content%}
  <section class="chefs">
-  <h1 class="chefs__title">Gerenciar chefs</h1>
+  <div class="headerCreate">
+   <div class="headerTitle">
+    <h1>Gerenciar chefs</h1>
+   </div>
+   <div class="headerActions">
+    <a href="/admin/chefs/create">
+     <button class="btn-salvar">Novo chef</button>
+    </a>
+   </div>
+  </div>
+
   <div class="chefs__grid">
    {% for chef in chefs %}
     <div class="chef">

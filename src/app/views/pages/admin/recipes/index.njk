@@ -2,7 +2,17 @@
 
 {% block content %}
   <section class="receitas">
-    <h2 class="receitas__adminTitle">Gerenciar receitas</h2>
+    <div class="headerCreate">
+      <div class="headerTitle">
+        <h1>Gerenciar receitas</h1>
+      </div>
+      <div class="headerActions">
+        <a href="/admin/recipes/create">
+          <button class="btn-salvar">Nova receita</button>
+        </a>
+      </div>
+    </div>
+
     <div class="receitas__gridAdmin">
       {% for recipe in recipes %}
         <div class="receita transform" href="/{{recipe.id}}">
