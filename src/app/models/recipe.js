@@ -1,5 +1,6 @@
 const db = require("../../config/db");
 const { date } = require("../../lib/utils");
+const recipes = require("../controllers/recipes");
 
 module.exports = {
   create(data, callback) {
@@ -53,6 +54,25 @@ module.exports = {
       console.log(results.rows[0])
       callback(results.rows[0]);
     });
+  },
+  findBy(params) {
+    const { filter, callback} = params
+
+    let query = ''
+    let filterQuery = '';
+
+    if(filter) {
+      filterQuery = `WHERE recipes.title ILIKE '%${filter}%'`
+    }
+
+    query = `SELECT recipes.* FROM recipes
+              ${filterQuery}
+    `
+
+    db.query(query, (err, results) => {
+      if(err) throw `Database error ${err}`
+      callback(results.rows)
+    })
   },
   update(data, callback) {
     const query = `

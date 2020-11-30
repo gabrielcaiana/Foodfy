@@ -3,10 +3,15 @@ const recipe = require("../models/recipe");
 
 module.exports = {
   index(req, res) {
-    db.query(`SELECT * FROM recipes`, (err, results) => {
-      if (err) throw `Database error! ${err}`;
-      return res.render("pages/site/index", { recipes: results.rows });
-    });
+    let { filter } = req.query;
+
+    const params = {
+      filter,
+      callback(recipes) {
+        return res.render("pages/site/index", {recipes, filter});
+      }
+    };
+    recipe.findBy(params)
   },
   recipes(req, res) {
     db.query(`SELECT * FROM recipes`, (err, results) => {
