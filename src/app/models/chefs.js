@@ -31,6 +31,18 @@ module.exports = {
       }
     );
   },
+  async chefRecipe(id) {
+    let results = await db.query(
+      `SELECT recipes.*
+      FROM recipes
+      LEFT JOIN chefs ON (chefs.id = recipes.chef_id)
+      WHERE chefs.id = $1
+      ORDER BY recipes.created_at DESC
+      `,
+      [id]
+    );
+    return results.rows;
+  },
   update(data, callback) {
     const query = `
     UPDATE chefs SET

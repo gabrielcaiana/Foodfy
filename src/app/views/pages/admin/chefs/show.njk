@@ -12,12 +12,24 @@
    </div>
    <img class="headerChef__image" src="{{chef.avatar_url}}" alt="{{chef.name}}">
    <h1 class="headerChef__name">{{chef.name}}</h1>
-   <span class="headerChef__recipes">{{chef.total_recipes}} receitas</span>
+   <span class="headerChef__recipes">{{chef.total_recipes}}
+    receitas</span>
   </header>
 
   <section class="receitas">
    <h2 class="receitas__adminTitle">Receitas</h2>
-   <div class="receitas__gridAdmin"></div>
-  </section>
- </div>
- {% endblock%}
+   <div class="receitas__gridAdmin">
+    {% for recipe in recipes%}
+     <div class="receita transform" href="/{{recipe.chef_id}}"> 
+      <div class="receita__content">
+       <img class="receita__content__thumb" src="{{recipe.image}}" alt="{{recipe.title}}">
+       <p class="receita__content__name">{{recipe.title}}</p>
+       <span class="receita__content__author">{{recipe.name}}</span>
+      </div>
+      <a class="receitas__link" href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+     </div>
+     {% endfor%}
+    </div>
+   </section>
+  </div>
+  {% endblock%}

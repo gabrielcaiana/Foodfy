@@ -43,10 +43,7 @@ module.exports = {
     });
   },
   find(id, callback) {
-    db.query(`SELECT * FROM recipes rcp
-    LEFT JOIN chefs cf
-    ON (rcp.chef_id = cf.id)
-    WHERE rcp.id = $1`, [id], function (
+    db.query(`SELECT * FROM recipes WHERE id = $1`, [id], function (
       err,
       results
     ) {

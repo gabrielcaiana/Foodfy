@@ -1,4 +1,5 @@
 const db = require("../../config/db");
+const { findRecipe } = require("../models/chefs");
 const chefs = require("../models/chefs");
 
 module.exports = {
@@ -22,12 +23,16 @@ module.exports = {
       return res.render("pages/admin/chefs/chefs", { chefs: results.rows });
     });
   },
-  show(req, res) {
-    const id = req.params.id;
+  async show(req, res) {
+    const { id } = req.params
+
+    let recipes = await  chefs.chefRecipe(id);
+
     chefs.find(id, (chef) => {
-      if (!chef) return res.send(`Chef not found!`);
-      return res.render("pages/admin/chefs/show", { chef });
-    });
+      if(!chef) res.send("Chef not found")
+      return res.render("pages/admin/chefs/show", { chef, recipes });
+    })
+
   },
   create(req, res) {
     return res.render("pages/admin/chefs/create");
