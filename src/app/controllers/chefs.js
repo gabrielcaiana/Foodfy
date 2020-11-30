@@ -1,5 +1,4 @@
 const db = require("../../config/db");
-const { findRecipe } = require("../models/chefs");
 const chefs = require("../models/chefs");
 
 module.exports = {
