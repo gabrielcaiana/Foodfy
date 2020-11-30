@@ -34,7 +34,7 @@ module.exports = {
       filteredPreparations,
       data.information,
       date(Date.now()).iso,
-      data.chef
+      data.chef,
     ];
 
     db.query(query, values, (err, results) => {
@@ -44,35 +44,41 @@ module.exports = {
     });
   },
   find(id, callback) {
-    db.query(`SELECT chefs.name, recipes.* FROM recipes
+    db.query(
+      `SELECT chefs.name, recipes.* FROM recipes
     LEFT JOIN chefs on (chefs.id = recipes.chef_id)
-    WHERE recipes.id = $1`, [id], function (
-      err,
-      results
-    ) {
-      if (err) throw `Database error ${err}`;
-      console.log(results.rows[0])
-      callback(results.rows[0]);
-    });
+    WHERE recipes.id = $1`,
+      [id],
+      function (err, results) {
+        if (err) throw `Database error ${err}`;
+        console.log(results.rows[0]);
+        callback(results.rows[0]);
+      }
+    );
   },
-  findBy(params) {
-    const { filter, callback} = params
+  pagination(params) {
+    const { filter, limit, offset, callback } = params;
 
-    let query = ''
-    let filterQuery = '';
+    let query = "";
+    let filterQuery = "";
+    let totalQuery = `(SELECT count(*) FROM recipes) as total`
 
-    if(filter) {
-      filterQuery = `WHERE recipes.title ILIKE '%${filter}%'`
+    if (filter) {
+      filterQuery = `WHERE recipes.title ILIKE '%${filter}%'`;
+
+      totalQuery = `(SELECT count(*) FROM recipes) as total`
     }
 
-    query = `SELECT recipes.* FROM recipes
+    query = `SELECT chefs.name, recipes.*, ${totalQuery} FROM recipes
+    LEFT JOIN chefs on (chefs.id = recipes.chef_id)
               ${filterQuery}
-    `
+              LIMIT $1 OFFSET $2
+    `;
 
-    db.query(query, (err, results) => {
-      if(err) throw `Database error ${err}`
-      callback(results.rows)
-    })
+    db.query(query, [limit, offset], (err, results) => {
+      if (err) throw `Database error ${err}`;
+      callback(results.rows);
+    });
   },
   update(data, callback) {
     const query = `
@@ -87,15 +93,15 @@ module.exports = {
   WHERE id = $8
   `;
 
-  let arrayIngredients = data.ingredients;
-  let filteredIngredients = arrayIngredients.filter((ingredient) => {
-    return ingredient != "";
-  });
+    let arrayIngredients = data.ingredients;
+    let filteredIngredients = arrayIngredients.filter((ingredient) => {
+      return ingredient != "";
+    });
 
-  let arrayPreparation = data.preparation;
-  let filteredPreparations = arrayPreparation.filter((preparation) => {
-    return preparation != "";
-  });
+    let arrayPreparation = data.preparation;
+    let filteredPreparations = arrayPreparation.filter((preparation) => {
+      return preparation != "";
+    });
 
     const values = [
       data.title,
@@ -105,7 +111,7 @@ module.exports = {
       data.information,
       date(Date.now()).iso,
       data.chef,
-      data.id
+      data.id,
     ];
 
     db.query(query, values, (err, results) => {
@@ -122,8 +128,8 @@ module.exports = {
   },
   chefsSelectOptions(callback) {
     db.query(`SELECT name, id FROM chefs`, (err, results) => {
-      if(err) `Database error ${err}`;
-      callback(results.rows)
-    })
-  }
+      if (err) `Database error ${err}`;
+      callback(results.rows);
+    });
+  },
 };

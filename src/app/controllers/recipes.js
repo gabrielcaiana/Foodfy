@@ -3,18 +3,34 @@ const recipe = require("../models/recipe");
 
 module.exports = {
   index(req, res) {
-    let { filter } = req.query;
+    let { filter, page, limit } = req.query;
+
+    page = page || 1
+    limit = limit || 2
+    let offset = limit * (page - 1)
 
     const params = {
       filter,
+      page,
+      limit,
+      offset,
       callback(recipes) {
-        return res.render("pages/site/index", {recipes, filter});
+        const pagination = {
+          total: Math.ceil(recipes[0].total / limit),
+          page
+        }
+        if(filter) {
+          return res.render("pages/site/search", {recipes, filter, pagination})
+        }else {
+          return res.render("pages/site/index", {recipes, filter, pagination});
+        }
       }
     };
-    recipe.findBy(params)
+    recipe.pagination(params)
   },
   recipes(req, res) {
-    db.query(`SELECT * FROM recipes`, (err, results) => {
+    db.query(`SELECT chefs.name, recipes.* FROM recipes
+    LEFT JOIN chefs on (chefs.id = recipes.chef_id)`, (err, results) => {
       if (err) throw `Database error! ${err}`;
       return res.render("pages/site/recipes", { recipes: results.rows });
     });

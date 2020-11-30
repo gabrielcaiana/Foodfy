@@ -66,3 +66,6 @@ document
 document
   .querySelector(".add-preparation")
   .addEventListener("click", addPreparation);
+
+//Paginação
+
